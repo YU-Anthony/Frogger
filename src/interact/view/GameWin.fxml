@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane fx:controller="interact.controller.GameWinController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="nameText" layoutX="221.0" layoutY="453.0" />
+      <TextArea layoutX="163.0" layoutY="305.0" prefHeight="84.0" prefWidth="299.0" text="Congradulations!&#10;You have win the game.&#10;Please enter your name in the below box" />
+      <Button fx:id="submitButton" layoutX="273.0" layoutY="518.0" mnemonicParsing="false" onAction="#nameSubmit" text="Submit" />
+   </children>
+</AnchorPane>

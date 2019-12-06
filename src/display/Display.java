@@ -2,12 +2,10 @@ package display;
 
 import java.util.ArrayList;
 
-import element.Digit;
-import element.End;
 import interact.controller.LevelController;
 import p4_group_8_repo.KeepScore;
 import p4_group_8_repo.MyStage;
-
+import element.*;
 
 public class Display{
 	
@@ -19,45 +17,37 @@ public class Display{
 	
 	public void createEasyWorld(MyStage bg) {
 	
-		DisplayLog d1=new DisplayLog();
-		//DisplayTruck d2=new DisplayTruck();
-		DisplayTurtle d3=new DisplayTurtle();
-		//DisplayCar d4 = new DisplayCar();
 		
-		d1.dELog(bg);
-		//d2.dTruck(bg);		
-		d3.dETurtle(bg);
-		//d4.dCar(bg);
+		Actor actor1=ActorFactory.getActor("log");
+		actor1.disPlay("Easy");
+		
+		Actor actor2=ActorFactory.getActor("Obstacle");
+		actor2.disPlay("Easy");
+
+	
+		Actor actor3=ActorFactory.getActor("Turtle");
+		actor3.disPlay();
+		
+
 		
 	
 		bg.add(new Digit(0, 30, 360, 10));
-		//bg.add(obstacle);
-		//bg.add(obstacle1);
-		//bg.add(obstacle2);
+
 		
 	}
 	
 	public void createNormalWorld(MyStage bg) {
 		
-		//DisplayLog d1=new DisplayLog();
-		DisplayTruck d2=new DisplayTruck();
-		//DisplayTurtle d3=new DisplayTurtle();
-		DisplayCar d4 = new DisplayCar();
-		DisplayShark d5=new DisplayShark();
-		DisplayBoat d6 = new DisplayBoat();
+		Actor actor1=ActorFactory.getActor("Obstacle");
+		actor1.disPlay("Normal");
 		
-		//d1.dNLog(bg);
-		d2.dNTruck(bg);		
-		//d3.dNTurtle(bg);
-		d4.dNCar(bg);
-		d5.dShark(bg);
-		d6.dBoat(bg);
+		Actor actor2=ActorFactory.getActor("Boat");
+		actor2.disPlay();
 		
 
-		//bg.add(obstacle);
-		//bg.add(obstacle1);
-		//bg.add(obstacle2);
-		
+		Actor actor3=ActorFactory.getActor("Shark");
+		actor3.disPlay();
+						
 	}
 	
 	public void endAndDigit() {

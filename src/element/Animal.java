@@ -1,6 +1,8 @@
 package element;
 
 import java.util.ArrayList;
+
+import display.Display;
 import javafx.event.EventHandler;
 
 import javafx.scene.image.Image;
@@ -9,7 +11,6 @@ import javafx.scene.input.KeyEvent;
 
 
 import interact.controller.LevelController;
-import display.Display;
 
 public class Animal extends Actor {
 	private Image imgW1;
@@ -157,7 +158,6 @@ public class Animal extends Actor {
 	@Override
 	public void act(long now) {
 		
-		int bounds = 0;
 		
 		// The forger can not get out of the boundary of scene.
 		insideBoundary();

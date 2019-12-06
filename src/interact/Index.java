@@ -1,4 +1,4 @@
-package interact.model;
+package interact;
 
 
 import javafx.application.Application;

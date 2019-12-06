@@ -1,6 +1,5 @@
-package display;
+package element;
 
-import element.Actor;
 import javafx.scene.image.Image;
 
 public class Health extends Actor{

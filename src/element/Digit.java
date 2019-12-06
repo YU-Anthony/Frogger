@@ -3,7 +3,6 @@ package element;
 import javafx.scene.image.Image;
 
 public class Digit extends Actor{
-	private static int dim;
 	private static Image im1;
 	@Override
 	public void act(long now) {

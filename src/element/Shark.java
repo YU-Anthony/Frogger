@@ -1,5 +1,6 @@
 package element;
 
+import interact.controller.LevelController;
 import javafx.scene.image.Image;
 
 public class Shark extends Actor {
@@ -34,6 +35,7 @@ public class Shark extends Actor {
 		if (getX() < -75 && speed<0)
 			setX(600);
 	}
+	
 	public Shark(int xpos, int ypos, double s, int w, int h) {
 		shark1 = new Image("file:src/img/shark.png", w, h, true, true);
 		
@@ -42,5 +44,22 @@ public class Shark extends Actor {
 		setY(ypos);
 		speed = s;
 		setImage(shark1);
+	}
+	
+	public Shark() {}
+	
+	
+	@Override
+	public void disPlay() {
+		for(int i=0;i<3;i++) {
+			LevelController.background.add(new Shark( 500, 355, -1.5, 80, 120));
+			LevelController.background.add(new Shark(300, 355, -1.5, 80, 120));
+			LevelController.background.add(new Shark( 700, 356, -1.5, 80, 120));
+			
+			LevelController.background.add(new AngryShark(800, 185, -1.5, 80, 95));
+			LevelController.background.add(new AngryShark(600, 185, -1.5, 80, 130));
+			LevelController.background.add(new AngryShark(400, 185, -1.5, 80, 130));
+
+		}
 	}
 }

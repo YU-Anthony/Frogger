@@ -59,5 +59,11 @@ public abstract class Actor extends ImageView{
 
 
     public abstract void act(long now);
+    
+    
+    public void disPlay(String gameLevel) {  	
+    }
+    
+    public void disPlay() {}
 
 }

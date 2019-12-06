@@ -50,7 +50,14 @@ public class AngryShark extends Actor {
 		setImage(Shark2);
 	}
 	
+	public AngryShark() {
+		
+	}
+
 	public boolean isSunk() {
 		return sunk;
 	}
+	
+	
+
 }

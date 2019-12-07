@@ -9,7 +9,10 @@ import java.util.ArrayList;
 
 
 /**
- * The Class Actor.
+ * Define the basic action for different actors
+ * such as {@link AngryShark},{@link Boat}
+ * {@link End},{@link Log},{@link Obstacle}
+ * {@link Shark},{@link Turtle},{@link WetTurtle}.
  */
 public abstract class Actor extends ImageView{
 

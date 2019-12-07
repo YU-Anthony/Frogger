@@ -8,7 +8,10 @@ import element.Shark;
 import element.Turtle;
 
 /**
- * Abstract the actor instantiation process.
+ * Class {@code ActoryFactory} abstract the actor instantiation process.
+ * 
+ * <p>{@link Display} uses this class to create different actors
+ * such as {@code Log},{@code Obstacle},{@code}.
  */
 public class ActorFactory {
 	/**

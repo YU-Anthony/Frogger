@@ -8,7 +8,7 @@ import p4_group_8_repo.MyStage;
 import element.*;
 
 /**
- * The Class Display.
+ *  Display different game level by using {@code ActorFactory}.
  */
 public class Display{
 	

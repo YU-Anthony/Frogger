@@ -7,16 +7,12 @@ import javafx.scene.image.Image;
  */
 public class AngryShark extends Actor {
 
-	Image Shark1;
-	Image Shark2;
+	private Image Shark1;
+	private Image Shark2;
 
 	private double speed;
 
-	int i = 1;
-
-	boolean bool = true;
-
-	boolean sunk = false;
+	private boolean sunk = false;
 
 	/**
 	 * AngryShark 's action.

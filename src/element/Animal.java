@@ -328,7 +328,7 @@ public class Animal extends Actor {
 	/*
 	 * Frogger returns to the origin point. 
 	 */
-	public void reOrigin( boolean deathState, String deathType) {
+	public void reOrigin(boolean deathState, String deathType){
 		setX(300);
 		setY(730+MOVEMENT);
 		deathState = false;

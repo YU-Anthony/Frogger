@@ -7,14 +7,23 @@ import p4_group_8_repo.KeepScore;
 import p4_group_8_repo.MyStage;
 import element.*;
 
+/**
+ * The Class Display.
+ */
 public class Display{
 	
+	/** The health. */
 	public static ArrayList<Health> health =new ArrayList<Health>(50);
+	
+	/** Import the variable-background. */
 	MyStage bg=LevelController.background;
 	
 	
-	// ****Actually, the method to generate different world is not efficient, it needs to be updated to get total different and efficient format
-	
+	/**
+	 * Generates the easy world.
+	 *
+	 * @param bg the background
+	 */
 	public void createEasyWorld(MyStage bg) {
 	
 		
@@ -27,15 +36,18 @@ public class Display{
 	
 		Actor actor3=ActorFactory.getActor("Turtle");
 		actor3.disPlay();
-		
-
-		
+			
 	
 		bg.add(new Digit(0, 30, 360, 10));
 
 		
 	}
 	
+	/**
+	 * Generates the normal world.
+	 *
+	 * @param bg the background
+	 */
 	public void createNormalWorld(MyStage bg) {
 		
 		Actor actor1=ActorFactory.getActor("Obstacle");
@@ -50,6 +62,9 @@ public class Display{
 						
 	}
 	
+	/**
+	 * Add the End and control digit.
+	 */
 	public void endAndDigit() {
 		//The end block
 				for(int i=0;i<5;i++) {
@@ -70,6 +85,9 @@ public class Display{
 		
 	}
 	
+	/**
+	 * Control the health point.
+	 */
 	public void healthPoint() {
 		for(int i=0;i<KeepScore.numOfLifes;i++) {
 			Health a = new Health(390+i*40,35);

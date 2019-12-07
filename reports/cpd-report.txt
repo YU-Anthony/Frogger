@@ -1,0 +1,410 @@
+Found a 9 line (108 tokens) duplication in the following files: 
+Starting at line 45 of Z:\SM\esciple\SM_CW2\src\element\Log.java
+Starting at line 53 of Z:\SM\esciple\SM_CW2\src\element\Log.java
+
+		if(gameLevel.equalsIgnoreCase("Easy")) {
+			for(int i=0;i<3;i++) {
+				LevelController.background.add(new Log("file:src/img/log3.png", 130, 0+220*i, 166, 0.75));
+				LevelController.background.add(new Log("file:src/img/log3.png", 130, 50+220*i, 329, 0.75));
+			}
+			
+			LevelController.background.add(new Log("file:src/img/logs.png", 250, 0, 276, -2));
+			LevelController.background.add(new Log("file:src/img/logs.png", 250, 400, 276,-2));
+		}else if (gameLevel.equalsIgnoreCase("Normal")) {
+=====================================================================
+Found a 18 line (85 tokens) duplication in the following files: 
+Starting at line 67 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+Starting at line 126 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+
+			                setImage(imgW1);
+			                
+			            }
+			            else if (event.getCode() == KeyCode.A) {	            	
+			            	 move(-MOVEMENTX, 0);
+			            	 setImage(imgA1);			           
+			            }
+			            else if (event.getCode() == KeyCode.S) {	            	
+			            	 move(0, MOVEMENT);
+			            	 setImage(imgS1);			            	 
+			            }
+			            else if (event.getCode() == KeyCode.D) {	            	
+			            	 move(MOVEMENTX, 0);
+			            	 setImage(imgD1);
+			            }
+						second = false;
+					
+					}else {
+=====================================================================
+Found a 14 line (72 tokens) duplication in the following files: 
+Starting at line 83 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+Starting at line 131 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+
+				System.out.println("Can not read file nnn");
+			}
+			
+			String line;
+			ArrayList<String> list = new ArrayList<String>();
+			
+			while((line=reader.readLine())!=null) {
+				 list.add(line);
+			}
+			
+			if(list.size()>=num) {
+				String sortedValue=list.get(num-1);
+				
+				String[] a =sortedValue.split(";");
+=====================================================================
+Found a 5 line (64 tokens) duplication in the following files: 
+Starting at line 33 of Z:\SM\esciple\SM_CW2\src\element\Actor.java
+Starting at line 47 of Z:\SM\esciple\SM_CW2\src\element\Actor.java
+
+    public <A extends Actor> java.util.List<A> getIntersectingObjects(java.lang.Class<A> cls){
+        ArrayList<A> someArray = new ArrayList<A>();
+        for (A actor: getWorld().getObjects(cls)) {
+            if (actor != this && actor.intersects(this.getBoundsInLocal())) {
+                someArray.add(actor);
+=====================================================================
+Found a 14 line (63 tokens) duplication in the following files: 
+Starting at line 70 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+Starting at line 117 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+
+		String sortedName = null;
+		
+		if(!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	    try {
+			BufferedReader reader=new BufferedReader(new FileReader(FILENAME));
+			if(!reader.ready()) {
+				System.out.println("Can not read file nnn");
+=====================================================================
+Found a 11 line (55 tokens) duplication in the following files: 
+Starting at line 7 of Z:\SM\esciple\SM_CW2\src\element\Boat.java
+Starting at line 12 of Z:\SM\esciple\SM_CW2\src\element\Log.java
+
+	private double speed;
+	@Override
+	public void act(long now) {
+		move(speed , 0);
+		if (getX()>600 && speed>0)
+			setX(-180);
+		if (getX()<-300 && speed<0)
+			setX(700);
+	}
+	
+	public Boat(String imageLink, int size, int xpos, int ypos, double s) {
+=====================================================================
+Found a 8 line (53 tokens) duplication in the following files: 
+Starting at line 29 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+Starting at line 47 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+
+		if(gameLevel.equalsIgnoreCase("Easy")) {
+			// The first line of car
+			for(int i=0;i<4;i++) {
+				LevelController.background.add(new Obstacle("file:src/img/car1Left.png", 100+150*i, 597, -1, 50, 50));
+			}
+			
+			// The second line of car
+			LevelController.background.add(new Obstacle("file:src/img/car1Left.png", 500, 490, -5, 50, 50));
+=====================================================================
+Found a 13 line (47 tokens) duplication in the following files: 
+Starting at line 31 of Z:\SM\esciple\SM_CW2\src\element\AngryShark.java
+Starting at line 30 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+					setImage(Shark2);
+					sunk = true;
+				}
+			
+			
+		move(speed , 0);
+		if (getX() > 600 && speed>0)
+			setX(-200);
+		if (getX() < -75 && speed<0)
+			setX(600);
+	}
+	
+	public AngryShark(int xpos, int ypos, double s, int w, int h) {
+=====================================================================
+Found a 9 line (46 tokens) duplication in the following files: 
+Starting at line 17 of Z:\SM\esciple\SM_CW2\src\element\Boat.java
+Starting at line 22 of Z:\SM\esciple\SM_CW2\src\element\Log.java
+
+	public Boat(String imageLink, int size, int xpos, int ypos, double s) {
+		setImage(new Image(imageLink, size,size, true, true));
+		setX(xpos);
+		setY(ypos);
+		speed = s;
+		
+	}
+	
+	public Boat() {}
+=====================================================================
+Found a 11 line (43 tokens) duplication in the following files: 
+Starting at line 33 of Z:\SM\esciple\SM_CW2\src\element\AngryShark.java
+Starting at line 29 of Z:\SM\esciple\SM_CW2\src\element\Shark.java
+Starting at line 31 of Z:\SM\esciple\SM_CW2\src\element\Turtle.java
+Starting at line 32 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+				}
+			
+			
+		move(speed , 0);
+		if (getX() > 600 && speed>0)
+			setX(-200);
+		if (getX() < -75 && speed<0)
+			setX(600);
+	}
+	
+	public AngryShark(int xpos, int ypos, double s, int w, int h) {
+=====================================================================
+Found a 6 line (37 tokens) duplication in the following files: 
+Starting at line 40 of Z:\SM\esciple\SM_CW2\src\element\Turtle.java
+Starting at line 40 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+	public Turtle(int xpos, int ypos, int s, int w, int h) {
+	
+		
+		
+		turtle1 = new Image("file:src/img/TurtleAnimation1.png", w, h, true, true);
+		turtle2 = new Image("file:src/img/TurtleAnimation2.png", w, h, true, true);
+=====================================================================
+Found a 12 line (37 tokens) duplication in the following files: 
+Starting at line 44 of Z:\SM\esciple\SM_CW2\src\interact\controller\LevelController.java
+Starting at line 72 of Z:\SM\esciple\SM_CW2\src\interact\controller\LevelController.java
+
+			world.createEasyWorld(background);
+			world.endAndDigit();
+			
+			    	    
+			animal = new Animal("file:src/img/froggerUp.png");
+		    background.add(animal);
+		    
+		    world.healthPoint();
+		     
+		    background.start();
+		   			
+		    Stage stage = (Stage) easyButton.getScene().getWindow();
+=====================================================================
+Found a 9 line (36 tokens) duplication in the following files: 
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\AngryShark.java
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+	private double speed;
+	int i = 1;
+	boolean bool = true;
+	boolean sunk = false;
+	@Override
+	public void act(long now) {
+
+				if (now/900000000  % 4 ==0) {
+					setImage(Shark1);
+=====================================================================
+Found a 6 line (35 tokens) duplication in the following files: 
+Starting at line 36 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+Starting at line 56 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+
+			LevelController.background.add(new Obstacle("file:src/img/car1Left.png", 500, 490, -5, 50, 50));
+			
+		
+			// For truck
+			for(int i=0;i<3;i++) {
+				LevelController.background.add(new Obstacle("file:src/img/truck1"+"Right.png", 0+300*i, 649, 2, 120, 120));
+=====================================================================
+Found a 6 line (33 tokens) duplication in the following files: 
+Starting at line 273 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+Starting at line 279 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+
+			if(getIntersectingObjects(Log.class).get(0).getLeft())
+				move(-2,0);
+			else
+				move (.75,0);
+		}
+		else if (getIntersectingObjects(Boat.class).size() >= 1 && !noMove) {
+=====================================================================
+Found a 6 line (32 tokens) duplication in the following files: 
+Starting at line 7 of Z:\SM\esciple\SM_CW2\src\element\Boat.java
+Starting at line 12 of Z:\SM\esciple\SM_CW2\src\element\Log.java
+Starting at line 7 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+
+	private double speed;
+	@Override
+	public void act(long now) {
+		move(speed , 0);
+		if (getX()>600 && speed>0)
+			setX(-180);
+=====================================================================
+Found a 10 line (32 tokens) duplication in the following files: 
+Starting at line 19 of Z:\SM\esciple\SM_CW2\src\interact\model\GameLose.java
+Starting at line 18 of Z:\SM\esciple\SM_CW2\src\interact\model\GameWin.java
+Starting at line 27 of Z:\SM\esciple\SM_CW2\src\interact\model\GameWin.java
+
+		 Parent root1 = FXMLLoader.load(getClass().getResource("/interact/view/gameLose.fxml"));
+		 scene1=new Scene(root1, 600, 800);
+		 primaryStage.setScene(scene1);
+		 primaryStage.show();
+		 primaryStage.setResizable(false);
+		 
+		 
+	}
+	
+	public GameLose(Stage primaryStage) {
+=====================================================================
+Found a 10 line (32 tokens) duplication in the following files: 
+Starting at line 21 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+Starting at line 72 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+Starting at line 119 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+
+		if(!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		// Write new score into score.txt.
+	    try(BufferedWriter bw = new BufferedWriter(new FileWriter(FILENAME1,true))) {
+=====================================================================
+Found a 8 line (31 tokens) duplication in the following files: 
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\AngryShark.java
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\Shark.java
+
+	private double speed;
+	int i = 1;
+	boolean bool = true;
+	boolean sunk = false;
+	@Override
+	public void act(long now) {
+
+				if (now/900000000  % 4 ==0) {
+=====================================================================
+Found a 5 line (31 tokens) duplication in the following files: 
+Starting at line 48 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+Starting at line 87 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+Starting at line 135 of Z:\SM\esciple\SM_CW2\src\interact\model\ScoreBoard.java
+
+			list = new ArrayList<String>();
+			
+			while((line=reader.readLine())!=null) {
+				 list.add(line);
+			}
+=====================================================================
+Found a 4 line (31 tokens) duplication in the following files: 
+Starting at line 33 of Z:\SM\esciple\SM_CW2\src\p4_group_8_repo\World.java
+Starting at line 49 of Z:\SM\esciple\SM_CW2\src\p4_group_8_repo\World.java
+
+								getOnKeyReleased().handle(event);
+							List<Actor> myActors = getObjects(Actor.class);
+							for (Actor anActor: myActors) {
+								if (anActor.getOnKeyReleased() != null) {
+=====================================================================
+Found a 4 line (30 tokens) duplication in the following files: 
+Starting at line 36 of Z:\SM\esciple\SM_CW2\src\element\AngryShark.java
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+Starting at line 32 of Z:\SM\esciple\SM_CW2\src\element\Shark.java
+Starting at line 33 of Z:\SM\esciple\SM_CW2\src\element\Turtle.java
+Starting at line 34 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+		move(speed , 0);
+		if (getX() > 600 && speed>0)
+			setX(-200);
+		if (getX() < -75 && speed<0)
+=====================================================================
+Found a 9 line (29 tokens) duplication in the following files: 
+Starting at line 29 of Z:\SM\esciple\SM_CW2\src\element\Boat.java
+Starting at line 49 of Z:\SM\esciple\SM_CW2\src\element\Shark.java
+
+	}
+	
+	
+	
+	@Override
+	public void disPlay() {
+		// The third Boat line 
+		for(int i=0;i<3;i++) {
+			LevelController.background.add(new Boat("file:src/img/speedboat.png", 130, 0+220*i, 160, 0.75));
+=====================================================================
+Found a 9 line (29 tokens) duplication in the following files: 
+Starting at line 38 of Z:\SM\esciple\SM_CW2\src\element\Log.java
+Starting at line 24 of Z:\SM\esciple\SM_CW2\src\element\Obstacle.java
+
+	}
+
+	
+	
+	@Override
+	public void disPlay(String gameLevel){
+		
+		if(gameLevel.equalsIgnoreCase("Easy")) {
+			for(int i=0;i<3;i++) {
+=====================================================================
+Found a 8 line (29 tokens) duplication in the following files: 
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\Shark.java
+Starting at line 10 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+	private double speed;
+	int i = 1;
+	boolean bool = true;
+	boolean sunk = false;
+	@Override
+	public void act(long now) {
+
+				if (now/900000000  % 3 ==0) {
+=====================================================================
+Found a 6 line (29 tokens) duplication in the following files: 
+Starting at line 55 of Z:\SM\esciple\SM_CW2\src\interact\controller\LevelController.java
+Starting at line 82 of Z:\SM\esciple\SM_CW2\src\interact\controller\LevelController.java
+
+		    Stage stage = (Stage) easyButton.getScene().getWindow();
+		    stage.setScene(scene);
+		    stage.show();
+		    
+		 // Put the score part in keepScore.java
+			KeepScore score=new KeepScore(animal,stage,music1);
+=====================================================================
+Found a 2 line (27 tokens) duplication in the following files: 
+Starting at line 23 of Z:\SM\esciple\SM_CW2\src\interact\Index.java
+Starting at line 27 of Z:\SM\esciple\SM_CW2\src\interact\model\GameWin.java
+
+		 Parent root1 = FXMLLoader.load(getClass().getResource("/interact/view/Index.fxml"));
+		 scene1=new Scene(root1, 600, 800);
+=====================================================================
+Found a 5 line (27 tokens) duplication in the following files: 
+Starting at line 41 of Z:\SM\esciple\SM_CW2\src\p4_group_8_repo\KeepScore.java
+Starting at line 91 of Z:\SM\esciple\SM_CW2\src\p4_group_8_repo\KeepScore.java
+
+            	if (animal.getStop()) {
+            		System.out.print("STOPP:");
+            		LevelController.background.stopMusic();
+            		stop();
+            		LevelController.background.stop();
+=====================================================================
+Found a 8 line (26 tokens) duplication in the following files: 
+Starting at line 46 of Z:\SM\esciple\SM_CW2\src\element\Turtle.java
+Starting at line 44 of Z:\SM\esciple\SM_CW2\src\element\WetTurtle.java
+
+		turtle3 = new Image("file:src/img/TurtleAnimation3.png", w, h, true, true);
+		setX(xpos);
+		setY(ypos);
+		speed = s;
+		setImage(turtle2);
+	}
+	
+	public Turtle() {}
+=====================================================================
+Found a 6 line (25 tokens) duplication in the following files: 
+Starting at line 67 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+Starting at line 88 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+Starting at line 126 of Z:\SM\esciple\SM_CW2\src\element\Animal.java
+
+			                setImage(imgW1);
+			                
+			            }
+			            else if (event.getCode() == KeyCode.A) {	            	
+			            	 move(-MOVEMENTX, 0);
+			            	 setImage(imgA1);			           

@@ -7,14 +7,16 @@ import element.Obstacle;
 import element.Shark;
 import element.Turtle;
 
-/*
- * {@code Simple factory method}
- *  The implement of specific Actor 
+/**
+ * Abstract the actor instantiation process.
  */
-
 public class ActorFactory {
-
-	
+	/**
+	 * Gets the type of actor.
+	 *
+	 * @param type the Actor type
+	 * @return the actor
+	 */
 	public static Actor getActor(String type) {
 		Actor actor=null;
 		if(type.equalsIgnoreCase("Log")) {

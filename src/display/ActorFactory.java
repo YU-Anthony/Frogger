@@ -4,14 +4,16 @@ import element.Actor;
 import element.Boat;
 import element.Log;
 import element.Obstacle;
+import element.Portal;
 import element.Shark;
 import element.Turtle;
 
 /**
  * Class {@code ActoryFactory} abstract the actor instantiation process.
  * 
- * <p>{@link Display} uses this class to create different actors
- * such as {@code Log},{@code Obstacle},{@code}.
+ * <p>
+ * {@link Display} uses this class to create different actors such as
+ * {@code Log},{@code Obstacle},{@code}.
  */
 public class ActorFactory {
 	/**
@@ -21,19 +23,21 @@ public class ActorFactory {
 	 * @return the actor
 	 */
 	public static Actor getActor(String type) {
-		Actor actor=null;
-		if(type.equalsIgnoreCase("Log")) {
+		Actor actor = null;
+		if (type.equalsIgnoreCase("Log")) {
 			actor = new Log();
-		}else if(type.equalsIgnoreCase("Obstacle")) {
+		} else if (type.equalsIgnoreCase("Obstacle")) {
 			actor = new Obstacle();
-		}else if(type.equalsIgnoreCase("Boat")) {
+		} else if (type.equalsIgnoreCase("Boat")) {
 			actor = new Boat();
-		}else if(type.equalsIgnoreCase("Shark")) {
+		} else if (type.equalsIgnoreCase("Shark")) {
 			actor = new Shark();
-		}else if(type.equalsIgnoreCase("Turtle")) {
+		} else if (type.equalsIgnoreCase("Turtle")) {
 			actor = new Turtle();
+		} else if (type.equalsIgnoreCase("Portal")) {
+			actor = new Portal();
 		}
-		
+
 		return actor;
 	}
 }

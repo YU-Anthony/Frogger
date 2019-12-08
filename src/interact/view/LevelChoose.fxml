@@ -12,8 +12,8 @@
             <Image url="@../../img/poster2.png" />
          </image>
       </ImageView>
-      <Button layoutX="146.0" layoutY="451.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="329.0" text="DIFFICULT" />
-      <Button fx:id="normalButton" layoutX="170.0" layoutY="333.0" mnemonicParsing="false" onAction="#changeToTest" prefHeight="92.0" prefWidth="279.0" text="NORMAL" />
+      <Button fx:id="secretButton" layoutX="146.0" layoutY="451.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="329.0" text="SECRET" />
+      <Button fx:id="normalButton" layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeToTest" prefHeight="92.0" prefWidth="279.0" text="NORMAL" />
       <Button fx:id="easyButton" layoutX="200.0" layoutY="241.0" mnemonicParsing="false" onAction="#changeToTest" prefHeight="92.0" prefWidth="220.0" text="EASY" />
    </children>
 </AnchorPane>

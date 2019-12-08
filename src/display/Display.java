@@ -37,6 +37,8 @@ public class Display{
 		Actor actor3=ActorFactory.getActor("Turtle");
 		actor3.disPlay();
 			
+		Actor actor4=ActorFactory.getActor("Portal");
+		actor4.disPlay();
 	
 		bg.add(new Digit(0, 30, 360, 10));
 

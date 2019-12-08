@@ -2,25 +2,37 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.ScoreBoardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../../resources/css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.ScoreBoardController">
    <children>
-      <Label layoutX="118.0" layoutY="187.0" text="1" />
-      <Label layoutX="118.0" layoutY="223.0" text="2" />
-      <Label layoutX="118.0" layoutY="266.0" text="3" />
-      <Label layoutX="118.0" layoutY="312.0" text="4" />
-      <Label layoutX="118.0" layoutY="360.0" text="5" />
-      <Label fx:id="firstName" layoutX="205.0" layoutY="188.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="secondName" layoutX="205.0" layoutY="224.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="thirdName" layoutX="205.0" layoutY="267.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="fourthName" layoutX="205.0" layoutY="313.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="fifthName" layoutX="205.0" layoutY="361.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="firstScore" layoutX="389.0" layoutY="188.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="secondScore" layoutX="389.0" layoutY="224.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="thirdScore" layoutX="389.0" layoutY="267.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="fourthScore" layoutX="389.0" layoutY="313.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Label fx:id="fifthScore" layoutX="389.0" layoutY="361.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <ImageView fitHeight="800.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../img/scoreboard.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="218.0" fitWidth="190.0" layoutX="13.0" layoutY="551.0">
+         <image>
+            <Image url="@../../img/frog.gif" />
+         </image>
+      </ImageView>
+      <Label layoutX="108.0" layoutY="164.0" text="1" />
+      <Label layoutX="108.0" layoutY="238.0" text="2" />
+      <Label layoutX="108.0" layoutY="312.0" text="3" />
+      <Label layoutX="108.0" layoutY="381.0" text="4" />
+      <Label layoutX="108.0" layoutY="456.0" text="5" />
+      <Label fx:id="firstName" layoutX="195.0" layoutY="165.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="secondName" layoutX="195.0" layoutY="239.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="thirdName" layoutX="195.0" layoutY="313.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="fourthName" layoutX="195.0" layoutY="382.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="fifthName" layoutX="195.0" layoutY="457.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="firstScore" layoutX="379.0" layoutY="165.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="secondScore" layoutX="379.0" layoutY="239.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="thirdScore" layoutX="379.0" layoutY="313.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="fourthScore" layoutX="379.0" layoutY="382.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
+      <Label fx:id="fifthScore" layoutX="379.0" layoutY="457.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
       <Button fx:id="gobackButton" layoutX="205.0" layoutY="604.0" mnemonicParsing="false" onAction="#changeToIndex" prefHeight="25.0" prefWidth="190.0" text="Back" />
    </children>
 </AnchorPane>

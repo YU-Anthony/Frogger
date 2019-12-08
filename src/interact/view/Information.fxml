@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.IndexController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.IndexController">
    <children>
-      <Button fx:id="gobackButton" layoutX="263.0" layoutY="650.0" mnemonicParsing="false" onAction="#changeToIndex" text="Go back" />
-      <Label layoutX="181.0" layoutY="250.0" prefHeight="25.0" prefWidth="82.0" text="In the game, " />
-      <Label layoutX="181.0" layoutY="275.0" prefHeight="25.0" prefWidth="238.0" text="the player will control the frog Frogger," />
-      <Label layoutX="181.0" layoutY="300.0" prefHeight="25.0" prefWidth="305.0" text="avoid the speeding traffic on the road, " />
-      <Label layoutX="181.0" layoutY="325.0" prefHeight="25.0" prefWidth="305.0" text="reach the end point with the help of wood in the rapids, " />
-      <Label layoutX="181.0" layoutY="350.0" prefHeight="25.0" prefWidth="343.0" text="and watch out for fierce predators along the way." />
+      <ImageView fitHeight="800.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../img/information.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="gobackButton" layoutX="150.0" layoutY="664.0" mnemonicParsing="false" onAction="#changeToIndex" prefHeight="92.0" prefWidth="284.0" stylesheets="@../../resources/css/style.css" text="GO  BACK" />
    </children>
 </AnchorPane>

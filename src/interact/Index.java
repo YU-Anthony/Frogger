@@ -1,11 +1,12 @@
 package interact;
 
+
 import javafx.application.Application;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -27,12 +28,16 @@ public class Index extends Application {
 		window = primaryStage;
 
 		Parent root1 = FXMLLoader.load(getClass().getResource("/interact/view/Index.fxml"));
+		window.getIcons().add(new Image("/img/icon.png"));
 		scene1 = new Scene(root1, 600, 800);
 		window.setScene(scene1);
 
 		window.setTitle("Frogger");
+		
+		
 		window.show();
 		window.setResizable(false);
+
 	}
 
 	/**

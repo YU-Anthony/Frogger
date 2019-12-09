@@ -2,6 +2,7 @@ package element;
 
 import interact.controller.LevelController;
 import javafx.scene.image.Image;
+import p4_group_8_repo.MyStage;
 
 /**
  * This Class inherit {@link Actor} and is displayed in {@link LevelController}.
@@ -73,6 +74,20 @@ public class Shark extends Actor {
 			LevelController.background.add(new AngryShark(800, 185, -1.5, 80, 95));
 			LevelController.background.add(new AngryShark(600, 185, -1.5, 80, 130));
 			LevelController.background.add(new AngryShark(400, 185, -1.5, 80, 130));
+
+		}
+	}
+	
+	@Override
+	public void disPlay(MyStage bg) {
+		for (int i = 0; i < 3; i++) {
+			bg.add(new Shark(500, 355, -1.5, 80, 120));
+			bg.add(new Shark(300, 355, -1.5, 80, 120));
+			bg.add(new Shark(700, 356, -1.5, 80, 120));
+
+			bg.add(new AngryShark(800, 185, -1.5, 80, 95));
+			bg.add(new AngryShark(600, 185, -1.5, 80, 130));
+			bg.add(new AngryShark(400, 185, -1.5, 80, 130));
 
 		}
 	}

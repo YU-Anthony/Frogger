@@ -10,12 +10,15 @@ import element.Digit;
 import interact.model.ScoreBoard;
 import interact.model.GameLose;
 import javafx.animation.AnimationTimer;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 import interact.model.GameWin;
-
+import interact.SceneSwitch;
 import interact.controller.LevelController;
 
 /**
@@ -35,6 +38,7 @@ public class KeepScore extends World {
 	private Boolean input = false;
 	private static final String FILENAME = "score.txt";
 	private String music;
+	private MyStage background;
 
 	public static int numOfLifes = 5;
 
@@ -45,15 +49,15 @@ public class KeepScore extends World {
 	public void createTimer() {
 		timer = new AnimationTimer() {
 			@Override
-			public void handle(long now) {
+			public void handle(long now){
 				if (animal.changeScore()) {
 					setNumber(animal.getPoints());
 				}
 				if (animal.getStop()) {
 					System.out.print("STOPP:");
-					LevelController.background.stopMusic();
+					background.stopMusic();
 					stop();
-					LevelController.background.stop();
+					background.stop();
 					Alert alert = new Alert(AlertType.INFORMATION);
 					alert.setTitle("You Have Won The Game!");
 					alert.setHeaderText("Your High Score: " + animal.getPoints() + "!");
@@ -95,9 +99,9 @@ public class KeepScore extends World {
 
 				if (animal.loseNumber() == numOfLifes) {
 					System.out.print("STOPP:");
-					LevelController.background.stopMusic();
+					background.stopMusic();
 					stop();
-					LevelController.background.stop();
+					background.stop();
 
 					GameLose lose = new GameLose(primaryStage);
 					try {
@@ -106,6 +110,20 @@ public class KeepScore extends World {
 						e.printStackTrace();
 					}
 
+				}
+				
+				if(animal.enterWorld()) {
+					background.stopMusic();
+					stop();
+					background.stop();
+					
+					SceneSwitch a = new SceneSwitch();
+					try {
+						a.sceneJumpTwo("/interact/view/NewWorld.fxml");
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
 				}
 			}
 		};
@@ -116,7 +134,7 @@ public class KeepScore extends World {
 	 */
 	@Override
 	public void start() {
-		LevelController.background.playMusic(music);
+		background.playMusic(music);
 		createTimer();
 		timer.start();
 	}
@@ -132,7 +150,7 @@ public class KeepScore extends World {
 			int d = n / 10;
 			int k = n - d * 10;
 			n = d;
-			LevelController.background.add(new Digit(k, 30, 360 - shift, 10));
+			background.add(new Digit(k, 30, 360 - shift, 10));
 			shift += 30;
 		}
 	}
@@ -176,10 +194,11 @@ public class KeepScore extends World {
 	 * @param primaryStage the primary stage
 	 * @param music        the music
 	 */
-	public KeepScore(Animal animal, Stage primaryStage, String music) {
+	public KeepScore(Animal animal, Stage primaryStage, String music, MyStage background) {
 		this.animal = animal;
 		this.primaryStage = primaryStage;
 		this.music = music;
+		this.background=background;
 	}
 
 }

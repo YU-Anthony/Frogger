@@ -64,7 +64,7 @@ public class Obstacle extends Actor {
 	public void disPlay(String gameLevel) {
 		if (gameLevel.equalsIgnoreCase("Easy")) {
 			// The first line of car
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < 3; i++) {
 				LevelController.background
 						.add(new Obstacle("file:src/img/car1Left.png", 100 + 150 * i, 597, -1, 50, 50));
 			}

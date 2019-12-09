@@ -6,13 +6,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../../resources/css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:controller="interact.controller.LevelController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../../resources/css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
             <Image url="@../../img/secretDoor.jpg.png" />
          </image>
       </ImageView>
-      <Button fx:id="enterButton" layoutX="200.0" layoutY="610.0" mnemonicParsing="false" onAction="#changeToNewworld" text="ENTER" />
+      <Button fx:id="enterButton" layoutX="200.0" layoutY="610.0" mnemonicParsing="false" onAction="#changeToSecret" text="ENTER" />
    </children>
 </AnchorPane>

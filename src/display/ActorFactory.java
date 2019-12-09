@@ -2,11 +2,13 @@ package display;
 
 import element.Actor;
 import element.Boat;
+import element.Gangartuar;
 import element.Log;
 import element.Obstacle;
 import element.Portal;
 import element.Shark;
 import element.Turtle;
+import element.Zombie;
 
 /**
  * Class {@code ActoryFactory} abstract the actor instantiation process.
@@ -36,6 +38,10 @@ public class ActorFactory {
 			actor = new Turtle();
 		} else if (type.equalsIgnoreCase("Portal")) {
 			actor = new Portal();
+		}else if(type.equalsIgnoreCase("Zombie")) {
+			actor = new Zombie();
+		}else if(type.equalsIgnoreCase("Gangartuar")) {
+			actor = new Gangartuar();
 		}
 
 		return actor;

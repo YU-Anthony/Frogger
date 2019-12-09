@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 import display.Display;
 import javafx.event.EventHandler;
-
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 import interact.controller.LevelController;
+import interact.SceneSwitch;
 
 /**
  * Define the actions for frogger, this class is implement in
@@ -26,21 +26,26 @@ public class Animal extends Actor {
 	private Image imgS2;
 	private Image imgD2;
 	private int points = 0;
+	private static int basePoints;
 	private int end = 0;
 	private int lose = 0;
+	private static int staticButton;
+	private int button=0;
 	private boolean second = false;
 	private boolean noMove = false;
 
 	static final double MOVEMENT = 13.3333333 * 2;
 	static final double MOVEMENTX = 10.666666 * 2;
 	static final int IMG_SIZE = 40;
-	static final int NUM_OF_END = 1;
+	static final int NUM_OF_END = 5;
 	static double w = 730;
 
 	private boolean carDeath = false;
 	private boolean waterDeath = false;
 	private boolean stop = false;
 	private boolean changeScore = false;
+	private boolean enterNewWorld = false;
+	
 
 	private int carD = 0;
 
@@ -58,6 +63,12 @@ public class Animal extends Actor {
 		setX(300);
 		setY(730 + MOVEMENT);
 
+		if(staticButton==1) {
+			points=basePoints;
+			button=1;
+			System.out.println("1111111111111");
+		}
+		
 		imgW1 = new Image("file:src/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true);
 		imgA1 = new Image("file:src/img/froggerLeft.png", IMG_SIZE, IMG_SIZE, true, true);
 		imgS1 = new Image("file:src/img/froggerDown.png", IMG_SIZE, IMG_SIZE, true, true);
@@ -160,6 +171,7 @@ public class Animal extends Actor {
 		// CarDeath or waterDeath.
 		death(now);
 		keepSpeed();
+		enterWorld();
 	}
 
 	/**
@@ -252,7 +264,7 @@ public class Animal extends Actor {
 
 		}
 
-		if (getIntersectingObjects(Obstacle.class).size() >= 1) {
+		if (getIntersectingObjects(Obstacle.class).size() >= 1 || getIntersectingObjects(Zombie.class).size() >= 1 || getIntersectingObjects(Gangartuar.class).size() >= 1 ){
 			carDeath = true;
 		}
 
@@ -323,7 +335,7 @@ public class Animal extends Actor {
 				setY(730 + MOVEMENT);
 			}
 
-		} else if (getY() < 413) {
+		} else if (getY() < 413 && button==0) {
 			waterDeath = true;
 		}
 	}
@@ -340,7 +352,8 @@ public class Animal extends Actor {
 		setY(730 + MOVEMENT);
 		deathState = false;
 		// Life decreases when frogger lose.
-		LevelController.background.remove(Display.health.get(lose));
+			LevelController.background2.remove(Display.health.get(lose));
+			LevelController.background.remove(Display.health.get(lose));
 		lose++;
 		carD = 0;
 		setImage(new Image("file:src/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true));
@@ -352,4 +365,16 @@ public class Animal extends Actor {
 		deathType = null;
 		deathState = false;
 	}
+
+	public boolean enterWorld() {
+		if (getIntersectingObjects(Portal.class).size() >= 1 && !noMove) {		
+			enterNewWorld=true;
+		}
+		w=730;
+		staticButton=1;
+		basePoints=points;
+		return enterNewWorld;
+		
+	}
+
 }

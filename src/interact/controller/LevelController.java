@@ -1,10 +1,14 @@
 package interact.controller;
 
+import java.io.IOException;
+
 import display.Display;
 import element.Animal;
 import element.BackgroundImage;
 import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
@@ -18,12 +22,16 @@ import p4_group_8_repo.MyStage;
  */
 public class LevelController extends Application {
 
-	public static MyStage background  = new MyStage();;
+	public static MyStage background  = new MyStage();
+	public static MyStage background2 = new MyStage();
 	private Animal animal;
 	private Display world;
 	private String music1 = "src/Frogger Main Song Theme (loop).mp3";
 	private String music2 = "src/SpongBob.mp3";
-
+	private String music3 = "src/Grasswalk.mp3";
+	
+	public static Stage stage;
+	public static Stage stage2;
 	
 	
 	
@@ -31,8 +39,10 @@ public class LevelController extends Application {
 	private Button easyButton;
 	@FXML
 	private Button normalButton;
+	@FXML
+	private Button enterButton;
 	
-	Scene scene = new Scene(background, 600, 800);
+
 
 	/**
 	 * Change to {@code easy level} when click on {@code easyButton} <br>
@@ -41,8 +51,9 @@ public class LevelController extends Application {
 	 * @throws Exception the exception
 	 */
 	@FXML
-	protected void changeToTest() throws Exception {
-		
+	protected void changeToEasy() throws Exception {
+			
+		Scene scene1 = new Scene(background, 600, 800);
 
 		// Different button to generate different levels
 		easyButton.setOnAction(event -> {
@@ -52,61 +63,100 @@ public class LevelController extends Application {
 
 			world = new Display();
 			world.createEasyWorld(background);
-			world.endAndDigit();
+			world.endAndDigit(background);
 
 			animal = new Animal("file:src/img/froggerUp.png");
 			background.add(animal);
 
-			world.healthPoint();
+			world.healthPoint(background);
 
 			background.start();
 
-			Stage stage = (Stage) easyButton.getScene().getWindow();
-			stage.setScene(scene);
+			stage = (Stage) easyButton.getScene().getWindow();
+			stage.setScene(scene1);
 			stage.show();
-			//stage.setResizable(false);
+			stage.setResizable(false);
 
 			// Put the score part in keepScore.java
-			KeepScore score = new KeepScore(animal, stage, music1);
+			KeepScore score = new KeepScore(animal, stage, music1,background);
 			score.start();
+			
+			
+			
 
 		});
 
+		
+
+		
+	}
+	
+	@FXML
+	protected void changeToNormal() throws Exception{
 		normalButton.setOnAction(event -> {
 
+			Scene scene1 = new Scene(background, 600, 800);
 			BackgroundImage froggerback = new BackgroundImage("file:src/img/arcade2.png");
 			background.add(froggerback);
 
 			world = new Display();
 			world.createNormalWorld(background);
-			world.endAndDigit();
+			world.endAndDigit(background);
 
 			animal = new Animal("file:src/img/froggerUp.png");
 			background.add(animal);
 
-			world.healthPoint();
+			world.healthPoint(background);
 
 			background.start();
 
-			Stage stage = (Stage) normalButton.getScene().getWindow();
-			stage.setScene(scene);
+			stage = (Stage) normalButton.getScene().getWindow();
+			stage.setScene(scene1);
 			stage.show();
 			stage.setResizable(false);
 
 			// Put the score part in keepScore.java
-			KeepScore score = new KeepScore(animal, stage, music2);
+			KeepScore score = new KeepScore(animal, stage, music2,background);
 			score.start();
+			
+			
 
 		});
 
 	}
 	
-	
-	
 	@FXML
-	public void changeToNewworld() throws Exception {
-		
+	protected void changeToSecret() throws Exception{
+		Scene scene2 = new Scene(background2, 600, 800);
+		enterButton.setOnAction(e -> {
+			
+			BackgroundImage froggerback2 = new BackgroundImage("file:src/img/background3test.png");
+			background2.add(froggerback2);
+
+			world = new Display();
+			world.createNewWorld(background2);
+			world.endAndDigit(background2);
+
+			animal = new Animal("file:src/img/froggerUp.png");
+			background2.add(animal);
+
+			world.healthPoint(background2);
+
+			background2.start();
+
+			stage = (Stage) enterButton.getScene().getWindow();
+			stage.setScene(scene2);
+			stage.show();
+			stage.setResizable(false);
+			
+			// Put the score part in keepScore.java
+			KeepScore score1 = new KeepScore(animal, stage, music3,background2);
+			score1.start();
+
+		});
+
 	}
+	
 	
 
 	/**
@@ -117,7 +167,7 @@ public class LevelController extends Application {
 	 */
 	@Override
 	public void start(Stage arg0) throws Exception {
-
+		
 	}
 
 }

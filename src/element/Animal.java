@@ -3,13 +3,10 @@ package element;
 import java.util.ArrayList;
 
 import display.Display;
-import javafx.event.EventHandler;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
+
 
 import interact.controller.LevelController;
-import interact.SceneSwitch;
 
 /**
  * Define the actions for frogger, this class is implement in
@@ -17,22 +14,14 @@ import interact.SceneSwitch;
  */
 public class Animal extends Actor {
 
-	private Image imgW1;
-	private Image imgA1;
-	private Image imgS1;
-	private Image imgD1;
-	private Image imgW2;
-	private Image imgA2;
-	private Image imgS2;
-	private Image imgD2;
-	private int points = 0;
+	public int points = 0;
 	private static int basePoints;
 	private int end = 0;
 	private int lose = 0;
 	private static int staticButton;
 	private int button=0;
-	private boolean second = false;
-	private boolean noMove = false;
+
+	boolean noMove = false;
 
 	static final double MOVEMENT = 13.3333333 * 2;
 	static final double MOVEMENTX = 10.666666 * 2;
@@ -42,14 +31,12 @@ public class Animal extends Actor {
 
 	private boolean carDeath = false;
 	private boolean waterDeath = false;
-	private boolean stop = false;
-	private boolean changeScore = false;
+	public boolean changeScore = false;
 	private boolean enterNewWorld = false;
 	
 
 	private int carD = 0;
 
-	private static int numSecondflase = 1;
 
 	ArrayList<End> inter = new ArrayList<End>();
 
@@ -66,95 +53,7 @@ public class Animal extends Actor {
 		if(staticButton==1) {
 			points=basePoints;
 			button=1;
-			System.out.println("1111111111111");
 		}
-		
-		imgW1 = new Image("file:src/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgA1 = new Image("file:src/img/froggerLeft.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgS1 = new Image("file:src/img/froggerDown.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgD1 = new Image("file:src/img/froggerRight.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgW2 = new Image("file:src/img/froggerUpJump.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgA2 = new Image("file:src/img/froggerLeftJump.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgS2 = new Image("file:src/img/froggerDownJump.png", IMG_SIZE, IMG_SIZE, true, true);
-		imgD2 = new Image("file:src/img/froggerRightJump.png", IMG_SIZE, IMG_SIZE, true, true);
-
-		setOnKeyPressed(new EventHandler<KeyEvent>() {
-			public void handle(KeyEvent event) {
-				if (!noMove) {
-					if (second) {
-						if (event.getCode() == KeyCode.W) {
-							move(0, -MOVEMENT);
-							changeScore = false;
-							setImage(imgW1);
-
-						} else if (event.getCode() == KeyCode.A) {
-							move(-MOVEMENTX, 0);
-							setImage(imgA1);
-						} else if (event.getCode() == KeyCode.S) {
-							move(0, MOVEMENT);
-							setImage(imgS1);
-						} else if (event.getCode() == KeyCode.D) {
-							move(MOVEMENTX, 0);
-							setImage(imgD1);
-						}
-						second = false;
-
-					} else {
-						if (event.getCode() == KeyCode.W) {
-							move(0, -MOVEMENT);
-
-							setImage(imgW2);
-
-						} else if (event.getCode() == KeyCode.A) {
-							move(-MOVEMENTX, 0);
-							setImage(imgA2);
-						} else if (event.getCode() == KeyCode.S) {
-							move(0, MOVEMENT);
-							setImage(imgS2);
-						} else if (event.getCode() == KeyCode.D) {
-							move(MOVEMENTX, 0);
-							setImage(imgD2);
-						}
-						second = true;
-					}
-					numSecondflase++;
-				}
-			}
-		});
-
-		setOnKeyReleased(new EventHandler<KeyEvent>() {
-			public void handle(KeyEvent event) {
-				if (numSecondflase == 2 || numSecondflase % 2 == 0) {
-					System.out.println(numSecondflase);
-					if (noMove) {
-					} else {
-						if (event.getCode() == KeyCode.W) {
-							if (getY() < w) {
-								changeScore = true;
-								w = getY();
-								points += 10;
-							}
-
-							move(0, -MOVEMENT);
-							setImage(imgW1);
-
-						} else if (event.getCode() == KeyCode.A) {
-							move(-MOVEMENTX, 0);
-							setImage(imgA1);
-						} else if (event.getCode() == KeyCode.S) {
-							move(0, MOVEMENT);
-							setImage(imgS1);
-						} else if (event.getCode() == KeyCode.D) {
-							move(MOVEMENTX, 0);
-							setImage(imgD1);
-						}
-						second = false;
-					}
-					numSecondflase = 1;
-				}
-			}
-		});
-
 	}
 
 	/**
@@ -165,8 +64,10 @@ public class Animal extends Actor {
 	@Override
 	public void act(long now) {
 
-		// The forger can not get out of the boundary of scene.
-		insideBoundary();
+		
+		AnimalMovementController amc = new AnimalMovementController();
+		amc.pressedMovent(this);
+		amc.insideBoundary(this);
 
 		// CarDeath or waterDeath.
 		death(now);
@@ -270,23 +171,7 @@ public class Animal extends Actor {
 
 	}
 
-	/**
-	 * Keep the frogger move inside the scene.
-	 */
-	private void insideBoundary() {
-		if (getY() <= 0 || getY() > 800) {
-//			setX(300);
-			// move(MOVEMENT*2, 0);
-			move(0, -MOVEMENT * 2);
-		}
-		if (getX() < 10) {
-			move(MOVEMENT * 2, 0);
-		}
 
-		if (getX() > 600) {
-			move(-MOVEMENT * 2, 0);
-		}
-	}
 
 	/**
 	 * Keep space and direction with items when this forger accrosing the river.
@@ -374,6 +259,16 @@ public class Animal extends Actor {
 		staticButton=1;
 		basePoints=points;
 		return enterNewWorld;
+		
+	}
+
+	public int getNumSecondflase() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void setNumSecondflase(int i) {
+		// TODO Auto-generated method stub
 		
 	}
 

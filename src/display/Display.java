@@ -27,16 +27,14 @@ public class Display {
 	public void createEasyWorld(MyStage bg) {
 
 		Actor actor1 = ActorFactory.getActor("log");
-		actor1.disPlay("Easy");
-
 		Actor actor3 = ActorFactory.getActor("Turtle");
-		actor3.disPlay();
-
 		Actor actor4 = ActorFactory.getActor("Portal");
-		actor4.disPlay();
-		
 		Actor actor2 = ActorFactory.getActor("Obstacle");
+		
+		actor1.disPlay("Easy");
 		actor2.disPlay("Easy");
+		actor3.disPlay();
+		actor4.disPlay();
 
 		bg.add(new Digit(0, 30, 360, 10));
 
@@ -50,14 +48,16 @@ public class Display {
 	public void createNormalWorld(MyStage bg) {
 
 		Actor actor1 = ActorFactory.getActor("Obstacle");
-		actor1.disPlay("Normal");
-
 		Actor actor2 = ActorFactory.getActor("Boat");
-		actor2.disPlay();
-
 		Actor actor3 = ActorFactory.getActor("Shark");
-		actor3.disPlay();
+		Actor actor4 = ActorFactory.getActor("Portal");
+		
 
+		
+		actor1.disPlay("Normal");
+		actor2.disPlay();
+		actor3.disPlay();
+		actor4.disPlay();
 	}
 
 	public void createNewWorld(MyStage bg2) {

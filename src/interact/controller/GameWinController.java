@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
  */
 public class GameWinController {
 
+	public static final ScoreBoard s = null;
 	@FXML
 	private Button submitButton;
 	@FXML
@@ -29,7 +30,8 @@ public class GameWinController {
 
 		submitButton.setOnAction(event -> {
 			String name = nameText.getText();
-			ScoreBoard s = new ScoreBoard(name);
+			ScoreBoard s = ScoreBoard.getInstance();
+			s.inputName(name);
 			s.inputScore();
 
 			SceneSwitch a = new SceneSwitch();

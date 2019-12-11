@@ -57,7 +57,7 @@ public class ScoreBoardController {
 
 	}
 
-	ScoreBoard s = new ScoreBoard();
+	ScoreBoard s = ScoreBoard.getInstance();
 
 	String nameOne = s.getName(1);
 	String nameTwo = s.getName(2);

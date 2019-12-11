@@ -66,7 +66,7 @@ public class KeepScore extends World {
 
 					// A new user can input his name when his score higher than the 5th score,
 					// otherwise the nameInput page doesn't show.
-					ScoreBoard a = new ScoreBoard();
+					ScoreBoard a = ScoreBoard.getInstance();
 
 					if (a.getScore(5) != "-") {
 						if (Integer.valueOf(a.getScore(5)) < animal.getPoints()) {

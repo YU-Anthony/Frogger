@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class ScoreBoard {
+	
+	private static ScoreBoard instance;
+	
 	private String name;
 	private ArrayList<String> list;
 	private static final String FILENAME1= "score.txt";
@@ -185,12 +188,22 @@ void resortAndWrite(ArrayList<String> arrayList) {
 }
 
 
-	public ScoreBoard(String name) {
-		this.name=name;
+	private ScoreBoard() {
 	}
 	
-	public ScoreBoard() {
-		
+//	public ScoreBoard() {
+//		
+//	}
+	
+	public static ScoreBoard getInstance() {
+		if(instance==null) {
+			instance=new ScoreBoard();
+		}
+		return instance;
+	}
+	
+	public String inputName(String name) {
+		return this.name=name;
 	}
 	
 	

@@ -8,7 +8,7 @@ import javafx.scene.media.MediaPlayer;
 /**
  * The Class MyStage: Used as background to combine different actors.
  */
-public class MyStage extends World {
+public class GameStage extends World {
 
 	private MediaPlayer mediaPlayer;
 
@@ -25,7 +25,7 @@ public class MyStage extends World {
 	/**
 	 * Instantiates a new my stage.
 	 */
-	public MyStage() {
+	public GameStage() {
 	}
 
 	/**

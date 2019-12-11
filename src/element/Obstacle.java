@@ -66,40 +66,40 @@ public class Obstacle extends Actor {
 			// The first line of car
 			for (int i = 0; i < 3; i++) {
 				LevelController.background
-						.add(new Obstacle("file:src/img/car1Left.png", 100 + 150 * i, 597, -1, 50, 50));
+						.add(new Obstacle("file:resource/img/car1Left.png", 100 + 150 * i, 597, -1, 50, 50));
 			}
 
 			// The second line of car
-			LevelController.background.add(new Obstacle("file:src/img/car1Left.png", 500, 490, -5, 50, 50));
+			LevelController.background.add(new Obstacle("file:resource/img/car1Left.png", 500, 490, -5, 50, 50));
 
 			// For truck
 			for (int i = 0; i < 3; i++) {
 				LevelController.background
-						.add(new Obstacle("file:src/img/truck1" + "Right.png", 0 + 300 * i, 649, 2, 120, 120));
+						.add(new Obstacle("file:resource/img/truck1" + "Right.png", 0 + 300 * i, 649, 2, 120, 120));
 			}
 
-			LevelController.background.add(new Obstacle("file:src/img/truck2Right.png", 0, 540, 1, 200, 200));
-			LevelController.background.add(new Obstacle("file:src/img/truck2Right.png", 500, 540, 1, 200, 200));
+			LevelController.background.add(new Obstacle("file:resource/img/truck2Right.png", 0, 540, 1, 200, 200));
+			LevelController.background.add(new Obstacle("file:resource/img/truck2Right.png", 500, 540, 1, 200, 200));
 
 		} else if (gameLevel.equalsIgnoreCase("Normal")) {
 
 			// The first line of car
 			for (int i = 0; i < 4; i++) {
 				LevelController.background
-						.add(new Obstacle("file:src/img/car1Left.png", 100 + 150 * i, 597, -1, 50, 50));
+						.add(new Obstacle("file:resource/img/car1Left.png", 100 + 150 * i, 597, -1, 50, 50));
 			}
 
 			// The second line of car
-			LevelController.background.add(new Obstacle("file:src/img/car2Left.png", 500, 490, -5, 50, 50));
+			LevelController.background.add(new Obstacle("file:resource/img/car2Left.png", 500, 490, -5, 50, 50));
 
 			// For train
 			for (int i = 0; i < 3; i++) {
 				LevelController.background
-						.add(new Obstacle("file:src/img/" + "traincar1.png", 0 + 250 * i, 649, 2, 80, 80));
+						.add(new Obstacle("file:resource/img/" + "traincar1.png", 0 + 250 * i, 649, 2, 80, 80));
 			}
 
-			LevelController.background.add(new Obstacle("file:src/img/trainRight.png", 0, 540, 1, 200, 200));
-			LevelController.background.add(new Obstacle("file:src/img/trainRight.png", 500, 540, 1, 200, 200));
+			LevelController.background.add(new Obstacle("file:resource/img/trainRight.png", 0, 540, 1, 200, 200));
+			LevelController.background.add(new Obstacle("file:resource/img/trainRight.png", 500, 540, 1, 200, 200));
 		}
 	}
 

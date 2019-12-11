@@ -38,7 +38,7 @@ public class KeepScore extends World {
 	private Boolean input = false;
 	private static final String FILENAME = "score.txt";
 	private String music;
-	private MyStage background;
+	private GameStage background;
 
 	public static int numOfLifes = 5;
 
@@ -194,7 +194,7 @@ public class KeepScore extends World {
 	 * @param primaryStage the primary stage
 	 * @param music        the music
 	 */
-	public KeepScore(Animal animal, Stage primaryStage, String music, MyStage background) {
+	public KeepScore(Animal animal, Stage primaryStage, String music, GameStage background) {
 		this.animal = animal;
 		this.primaryStage = primaryStage;
 		this.music = music;

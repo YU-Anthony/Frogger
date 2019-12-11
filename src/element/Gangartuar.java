@@ -42,7 +42,7 @@ public class Gangartuar extends Actor{
 		
 		
 		for(int i=1;i<=8;i++) {
-			Image zombie=new Image("file:src/img/zombie/Gargantuar_"+ String.valueOf(i)+".png", w, h, true, true);
+			Image zombie=new Image("file:resource/img/zombie/Gargantuar_"+ String.valueOf(i)+".png", w, h, true, true);
 			image.add(zombie);
 		}
 

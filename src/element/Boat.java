@@ -66,12 +66,12 @@ public class Boat extends Actor {
 	public void disPlay() {
 		// The third Boat line
 		for (int i = 0; i < 3; i++) {
-			LevelController.background.add(new Boat("file:src/img/speedboat.png", 130, 0 + 220 * i, 160, 0.75));
-			LevelController.background.add(new Boat("file:src/img/speedboat.png", 130, 50 + 220 * i, 320, 0.75));
+			LevelController.background.add(new Boat("file:resource/img/speedboat.png", 130, 0 + 220 * i, 160, 0.75));
+			LevelController.background.add(new Boat("file:resource/img/speedboat.png", 130, 50 + 220 * i, 320, 0.75));
 		}
 
-		LevelController.background.add(new Boat("file:src/img/speedboatleft.png", 140, 0, 260, -2));
-		LevelController.background.add(new Boat("file:src/img/speedboatleft.png", 140, 400, 260, -2));
+		LevelController.background.add(new Boat("file:resource/img/speedboatleft.png", 140, 0, 260, -2));
+		LevelController.background.add(new Boat("file:resource/img/speedboatleft.png", 140, 400, 260, -2));
 	}
 
 }

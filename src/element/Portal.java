@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import display.Display;
 import interact.controller.LevelController;
 import javafx.application.Platform;
 import javafx.scene.image.Image;
@@ -30,7 +29,7 @@ public class Portal extends Actor {
 	@Override
 	public void disPlay() {
 
-		a = new Portal("file:src/img/door.png", 70, 200, 400);
+		a = new Portal("file:resource/img/door.png", 70, 200, 400);
 		LevelController.background.add(a);
 
 		startTimer();
@@ -52,7 +51,8 @@ public class Portal extends Actor {
 				}
 				Platform.runLater(() -> {
 					Random random = new Random();
-					a = new Portal("file:src/img/door.png", 70, 200 - random.nextInt(200), 400+random.nextInt(300));
+					a = new Portal("file:resource/img/door.png", 70, 200 - random.nextInt(200),
+							400 + random.nextInt(300));
 					LevelController.background.add(a);
 				});
 			}

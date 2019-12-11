@@ -18,7 +18,6 @@ import javafx.scene.layout.Pane;
  * {@code Stop game},Create {@code timer}.
  */
 public abstract class World extends Pane {
-
 	private AnimationTimer timer;
 
 	/**
@@ -127,6 +126,7 @@ public abstract class World extends Pane {
 	 * @param cls the cls
 	 * @return the objects
 	 */
+	@SuppressWarnings("unchecked")
 	public <A extends Actor> List<A> getObjects(Class<A> cls) {
 		ArrayList<A> someArray = new ArrayList<A>();
 		for (Node n : getChildren()) {

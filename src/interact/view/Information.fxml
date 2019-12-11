@@ -9,9 +9,9 @@
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
-            <Image url="@../../img/information.png" />
+            <Image url="@../../../resource/img/information.png" />
          </image>
       </ImageView>
-      <Button fx:id="gobackButton" layoutX="150.0" layoutY="664.0" mnemonicParsing="false" onAction="#changeToIndex" prefHeight="92.0" prefWidth="284.0" stylesheets="@../../resources/css/style.css" text="GO  BACK" />
+      <Button fx:id="gobackButton" layoutX="170.0" layoutY="666.0" mnemonicParsing="false" onAction="#changeToIndex" prefHeight="92.0" prefWidth="284.0" stylesheets="@../../resources/css/style.css" text="GO  BACK" />
    </children>
 </AnchorPane>

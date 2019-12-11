@@ -10,12 +10,12 @@
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
-            <Image url="@../../img/scoreboard.png" />
+            <Image url="@../../../resource/img/scoreboard.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="218.0" fitWidth="190.0" layoutX="13.0" layoutY="551.0">
+      <ImageView fitHeight="218.0" fitWidth="190.0" layoutX="64.0" layoutY="549.0">
          <image>
-            <Image url="@../../img/frog.gif" />
+            <Image url="@../../../resource/img/frog.gif" />
          </image>
       </ImageView>
       <Label layoutX="108.0" layoutY="164.0" text="1" />
@@ -33,6 +33,6 @@
       <Label fx:id="thirdScore" layoutX="379.0" layoutY="313.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
       <Label fx:id="fourthScore" layoutX="379.0" layoutY="382.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
       <Label fx:id="fifthScore" layoutX="379.0" layoutY="457.0" prefHeight="15.0" prefWidth="145.0" text="Label" />
-      <Button fx:id="gobackButton" layoutX="205.0" layoutY="604.0" mnemonicParsing="false" onAction="#changeToIndex" prefHeight="25.0" prefWidth="190.0" text="Back" />
+      <Button fx:id="gobackButton" layoutX="340.0" layoutY="604.0" mnemonicParsing="false" onAction="#changeToIndex" prefHeight="25.0" prefWidth="190.0" text="Back" />
    </children>
 </AnchorPane>

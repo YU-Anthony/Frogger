@@ -5,23 +5,25 @@ import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
-public class AnimalMovementController extends Actor{
+public class AnimalMovementController extends Actor {
 
 	private int IMG_SIZE = Animal.IMG_SIZE;
 	private double MOVEMENT = Animal.MOVEMENT;
 	private double MOVEMENTX = Animal.MOVEMENTX;
 	private boolean second = false;
+	private Animal animal;
 
-	private Image imgW1 = new Image("file:src/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgA1 = new Image("file:src/img/froggerLeft.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgS1 = new Image("file:src/img/froggerDown.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgD1 = new Image("file:src/img/froggerRight.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgW2 = new Image("file:src/img/froggerUpJump.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgA2 = new Image("file:src/img/froggerLeftJump.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgS2 = new Image("file:src/img/froggerDownJump.png", IMG_SIZE, IMG_SIZE, true, true);
-	private Image imgD2 = new Image("file:src/img/froggerRightJump.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgW1 = new Image("file:resource/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgA1 = new Image("file:resource/img/froggerLeft.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgS1 = new Image("file:resource/img/froggerDown.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgD1 = new Image("file:resource/img/froggerRight.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgW2 = new Image("file:resource/img/froggerUpJump.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgA2 = new Image("file:resource/img/froggerLeftJump.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgS2 = new Image("file:resource/img/froggerDownJump.png", IMG_SIZE, IMG_SIZE, true, true);
+	private Image imgD2 = new Image("file:resource/img/froggerRightJump.png", IMG_SIZE, IMG_SIZE, true, true);
 
-	public void pressedMovent(Animal animal)  {
+	public void pressedMovent(Animal animal) {
+		this.animal = animal;
 
 		animal.setOnKeyPressed(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event) {
@@ -72,7 +74,7 @@ public class AnimalMovementController extends Actor{
 			public void handle(KeyEvent event) {
 
 				if (animal.getNumSecondflase() == 2 || animal.getNumSecondflase() % 2 == 0) {
-					System.out.println(animal.getNumSecondflase());
+					// System.out.println(animal.getNumSecondflase());
 					if (animal.noMove) {
 					} else {
 						if (event.getCode() == KeyCode.W) {
@@ -101,31 +103,28 @@ public class AnimalMovementController extends Actor{
 				}
 			}
 		});
-
 	}
 
-	
 	/**
 	 * Keep the frogger move inside the scene.
 	 */
-	public void insideBoundary(Animal animal) {
-		if (getY() <= 0 || getY() > 800) {
-			move(0, -MOVEMENT * 2);
+	public void insideBoundary() {
+		
+		if (animal.getY() <= 0 || animal.getY() > 800) {
+			animal.move(0, -MOVEMENT * 2);
 		}
-		if (getX() < 10) {
-			move(MOVEMENT * 2, 0);
+		if (animal.getX() < 10) {
+			animal.move(MOVEMENT * 2, 0);
 		}
 
-		if (getX() > 600) {
-			move(-MOVEMENT * 2, 0);
+		if (animal.getX() > 600) {
+			animal.move(-MOVEMENT * 2, 0);
 		}
 	}
-
 
 	@Override
 	public void act(long now) {
-		// TODO Auto-generated method stub
-		
+
 	}
-	
+
 }

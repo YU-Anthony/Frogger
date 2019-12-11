@@ -49,8 +49,8 @@ public class AngryShark extends Actor {
 	 * @param h    the height
 	 */
 	public AngryShark(int xpos, int ypos, double s, int w, int h) {
-		Shark1 = new Image("file:src/img/shark.png", w, h, true, true);
-		Shark2 = new Image("file:src/img/shark2.png", w, h, true, true);
+		Shark1 = new Image("file:resource/img/shark.png", w, h, true, true);
+		Shark2 = new Image("file:resource/img/shark2.png", w, h, true, true);
 
 		setX(xpos);
 		setY(ypos);

@@ -58,10 +58,10 @@ public class WetTurtle extends Actor {
 	 * @param h    the image height
 	 */
 	public WetTurtle(int xpos, int ypos, int s, int w, int h) {
-		turtle1 = new Image("file:src/img/TurtleAnimation1.png", w, h, true, true);
-		turtle2 = new Image("file:src/img/TurtleAnimation2Wet.png", w, h, true, true);
-		turtle3 = new Image("file:src/img/TurtleAnimation3Wet.png", w, h, true, true);
-		turtle4 = new Image("file:src/img/TurtleAnimation4Wet.png", w, h, true, true);
+		turtle1 = new Image("file:resource/img/TurtleAnimation1.png", w, h, true, true);
+		turtle2 = new Image("file:resource/img/TurtleAnimation2Wet.png", w, h, true, true);
+		turtle3 = new Image("file:resource/img/TurtleAnimation3Wet.png", w, h, true, true);
+		turtle4 = new Image("file:resource/img/TurtleAnimation4Wet.png", w, h, true, true);
 		setX(xpos);
 		setY(ypos);
 		speed = s;

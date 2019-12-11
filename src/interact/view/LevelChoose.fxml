@@ -9,7 +9,7 @@
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
-            <Image url="@../../img/poster2.png" />
+            <Image url="@../../../resource/img/poster2.png" />
          </image>
       </ImageView>
       <Button fx:id="secretButton" layoutX="146.0" layoutY="451.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="329.0" text="SECRET" />

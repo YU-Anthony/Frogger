@@ -2,7 +2,7 @@ package element;
 
 import interact.controller.LevelController;
 import javafx.scene.image.Image;
-import p4_group_8_repo.MyStage;
+import p4_group_8_repo.GameStage;
 
 /**
  * This Class inherit {@link Actor} and is displayed in {@link LevelController}.
@@ -44,7 +44,7 @@ public class Shark extends Actor {
 	 * @param h    the image height
 	 */
 	public Shark(int xpos, int ypos, double s, int w, int h) {
-		shark1 = new Image("file:src/img/shark.png", w, h, true, true);
+		shark1 = new Image("file:resource/img/shark.png", w, h, true, true);
 
 		setX(xpos);
 		setY(ypos);
@@ -77,9 +77,9 @@ public class Shark extends Actor {
 
 		}
 	}
-	
+
 	@Override
-	public void disPlay(MyStage bg) {
+	public void disPlay(GameStage bg) {
 		for (int i = 0; i < 3; i++) {
 			bg.add(new Shark(500, 355, -1.5, 80, 120));
 			bg.add(new Shark(300, 355, -1.5, 80, 120));

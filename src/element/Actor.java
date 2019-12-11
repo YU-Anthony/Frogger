@@ -3,7 +3,7 @@ package element;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.input.InputEvent;
-import p4_group_8_repo.MyStage;
+import p4_group_8_repo.GameStage;
 import p4_group_8_repo.World;
 
 import java.util.ArrayList;
@@ -124,5 +124,5 @@ public abstract class Actor extends ImageView{
      */
     public void disPlay() {}
     
-    public void disPlay(MyStage bg) {}
+    public void disPlay(GameStage bg) {}
 }

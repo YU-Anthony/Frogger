@@ -2,7 +2,7 @@ package element;
 
 import java.util.ArrayList;
 
-import display.Display;
+import display.GameApp;
 import javafx.scene.image.Image;
 
 
@@ -64,16 +64,18 @@ public class Animal extends Actor {
 	@Override
 	public void act(long now) {
 
-		
 		AnimalMovementController amc = new AnimalMovementController();
 		amc.pressedMovent(this);
-		amc.insideBoundary(this);
-
+		amc.insideBoundary();
 		// CarDeath or waterDeath.
 		death(now);
 		keepSpeed();
 		enterWorld();
 	}
+	
+	
+
+	
 
 	/**
 	 * Stop if frogger have reached to terminal point {@code NUM_OF_END} times.
@@ -123,6 +125,7 @@ public class Animal extends Actor {
 	 * @param now the now
 	 */
 	private void death(long now) {
+		
 		String deathType = null;
 		boolean deathState = false;
 
@@ -142,16 +145,16 @@ public class Animal extends Actor {
 
 			switch (carD) {
 			case 1:
-				setImage(new Image("file:src/img/" + deathType + "death1.png", IMG_SIZE, IMG_SIZE, true, true));
+				setImage(new Image("file:resource/img/" + deathType + "death1.png", IMG_SIZE, IMG_SIZE, true, true));
 			case 2:
-				setImage(new Image("file:src/img/" + deathType + "death2.png", IMG_SIZE, IMG_SIZE, true, true));
+				setImage(new Image("file:resource/img/" + deathType + "death2.png", IMG_SIZE, IMG_SIZE, true, true));
 			case 3:
-				setImage(new Image("file:src/img/" + deathType + "death3.png", IMG_SIZE, IMG_SIZE, true, true));
+				setImage(new Image("file:resource/img/" + deathType + "death3.png", IMG_SIZE, IMG_SIZE, true, true));
 			}
 
 			if (carD == 4) {
 				if ("water".equals(deathType)) {
-					setImage(new Image("file:src/img/" + deathType + "death4.png", IMG_SIZE, IMG_SIZE, true, true));
+					setImage(new Image("file:resource/img/" + deathType + "death4.png", IMG_SIZE, IMG_SIZE, true, true));
 				} else {
 					reOrigin(carDeath, deathType);
 					carDeath = false;
@@ -237,11 +240,11 @@ public class Animal extends Actor {
 		setY(730 + MOVEMENT);
 		deathState = false;
 		// Life decreases when frogger lose.
-			LevelController.background2.remove(Display.health.get(lose));
-			LevelController.background.remove(Display.health.get(lose));
+			LevelController.background2.remove(GameApp.health.get(lose));
+			LevelController.background.remove(GameApp.health.get(lose));
 		lose++;
 		carD = 0;
-		setImage(new Image("file:src/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true));
+		setImage(new Image("file:resource/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true));
 		noMove = false;
 		if (points > 50) {
 			points -= 50;
@@ -261,6 +264,8 @@ public class Animal extends Actor {
 		return enterNewWorld;
 		
 	}
+	
+	
 
 	public int getNumSecondflase() {
 		// TODO Auto-generated method stub

@@ -28,7 +28,7 @@ public class Index extends Application {
 		window = primaryStage;
 
 		Parent root1 = FXMLLoader.load(getClass().getResource("/interact/view/Index.fxml"));
-		window.getIcons().add(new Image("/img/icon.png"));
+		window.getIcons().add(new Image("file:resource/img/icon.png"));
 		scene1 = new Scene(root1, 600, 800);
 		window.setScene(scene1);
 

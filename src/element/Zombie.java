@@ -45,7 +45,7 @@ public class Zombie extends Actor {
 
 	public Zombie(int xpos, int ypos, double s, int w, int h) {
 		for(int i=1;i<=7;i++) {
-			Image zombie=new Image("file:src/img/zombie/z_1_0"+ String.valueOf(i)+".png", w, h, true, true);
+			Image zombie=new Image("file:resource/img/zombie/z_1_0"+ String.valueOf(i)+".png", w, h, true, true);
 			image.add(zombie);
 		}
 		

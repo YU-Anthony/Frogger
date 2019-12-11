@@ -19,7 +19,7 @@ public class Health extends Actor {
 	public Health(int x, int y) {
 		setX(x);
 		setY(y);
-		setImage(new Image("file:src/img/hp.png", 40, 40, true, true));
+		setImage(new Image("file:resource/img/hp.png", 40, 40, true, true));
 	}
 
 	/**

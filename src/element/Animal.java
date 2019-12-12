@@ -4,8 +4,7 @@ import java.util.ArrayList;
 
 import display.GameApp;
 import javafx.scene.image.Image;
-
-
+import p4_group_8_repo.KeepScore;
 import interact.controller.LevelController;
 
 /**
@@ -264,7 +263,6 @@ public class Animal extends Actor {
 		return enterNewWorld;
 		
 	}
-	
 	
 
 	public int getNumSecondflase() {

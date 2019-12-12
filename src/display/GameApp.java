@@ -1,13 +1,26 @@
 package display;
 
+
+import java.io.IOException;
 import java.util.ArrayList;
 
+
 import interact.controller.LevelController;
+import interact.model.GameLose;
 import javafx.scene.Scene;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import p4_group_8_repo.KeepScore;
 import p4_group_8_repo.GameStage;
 import element.*;
+import javafx.animation.*;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.util.Duration;
+
+
+
 
 /**
  * Display different game level by using {@code ActorFactory}.
@@ -109,8 +122,43 @@ public class GameApp {
 		
 		animal = new Animal("file:resource/img/froggerUp.png");
 		bg.add(animal);
+		
+		
+		ProgressBar bar = new ProgressBar(0);
+	    bar.setPrefSize(300, 24);
 
+	    Timeline task = new Timeline(
+	        new KeyFrame(
+	                Duration.seconds(80),       
+	                new KeyValue(bar.progressProperty(), 0)
+	        ),
+	        new KeyFrame(
+	                Duration.ZERO, 
+	                new KeyValue(bar.progressProperty(), 1)            
+	        )
+	    );
+	    
+	    task.playFromStart();
+	    
+	    task.setOnFinished(event->{
 
+	    	 GameLose gl=new GameLose(stage);
+	    	 try {
+				gl.endChoices();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+	    	 
+	     });
+	
+
+	    GridPane layout = new GridPane();
+	    layout.getChildren().setAll(bar);
+	    layout.setPadding(new Insets(10));
+	    layout.setAlignment(Pos.CENTER);   
+	    bg.getChildren().add(layout);
+	
+	    
 		bg.start();
 
 		stage.setScene(scene1);
@@ -149,7 +197,7 @@ public class GameApp {
 			}
 		}
 
-		bg.add(new Digit(0, 30, 360, 10));
+		bg.add(new Digit(0, 30, 550, 10));
 
 	}
 

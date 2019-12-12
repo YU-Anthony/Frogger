@@ -150,9 +150,10 @@ public class KeepScore extends World {
 			int d = n / 10;
 			int k = n - d * 10;
 			n = d;
-			background.add(new Digit(k, 30, 360 - shift, 10));
+			background.add(new Digit(k, 30, 550 - shift, 10));
 			shift += 30;
 		}
+		background.add(new Digit(0, 30, 550 - shift, 10));
 	}
 
 	/**

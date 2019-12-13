@@ -4,13 +4,13 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import interact.controller.LevelController;
+import interact.GameStage;
 import javafx.application.Platform;
 import javafx.scene.image.Image;
 
 public class Portal extends Actor {
 
-	static Portal a;
+	private static Portal a;
 
 	public Portal(String imageLink, int size, int xpos, int ypos) {
 		setImage(new Image(imageLink, size, size, true, true));
@@ -27,21 +27,21 @@ public class Portal extends Actor {
 	}
 
 	@Override
-	public void disPlay() {
+	public void disPlay(GameStage background) {
 
 		a = new Portal("file:resource/img/door.png", 70, 200, 400);
-		LevelController.background.add(a);
+//		background.add(a);
 
-		startTimer();
+		startTimer(background);
 	}
 
-	public static void startTimer() {
+	public static void startTimer(GameStage background) {
 		TimerTask task = new TimerTask() {
 
 			@Override
 			public void run() {
 				Platform.runLater(() -> {
-					LevelController.background.remove(a);
+					background.remove(a);
 				});
 
 				try {
@@ -53,7 +53,7 @@ public class Portal extends Actor {
 					Random random = new Random();
 					a = new Portal("file:resource/img/door.png", 70, 200 - random.nextInt(200),
 							400 + random.nextInt(300));
-					LevelController.background.add(a);
+					background.add(a);
 				});
 			}
 

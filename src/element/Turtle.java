@@ -1,5 +1,6 @@
 package element;
 
+import interact.GameStage;
 import interact.controller.LevelController;
 import javafx.scene.image.Image;
 
@@ -77,14 +78,14 @@ public class Turtle extends Actor {
 	 * displayed in easy game level.
 	 */
 	@Override
-	public void disPlay() {
-		LevelController.background.add(new Turtle(500, 376, -1, 130, 130));
-		LevelController.background.add(new Turtle(300, 376, -1, 130, 130));
+	public void disPlay(GameStage background) {
+		background.add(new Turtle(500, 376, -1, 130, 130));
+		background.add(new Turtle(300, 376, -1, 130, 130));
 
-		LevelController.background.add(new WetTurtle(700, 376, -1, 130, 130));
-		LevelController.background.add(new WetTurtle(600, 217, -1, 130, 130));
-		LevelController.background.add(new WetTurtle(400, 217, -1, 130, 130));
-		LevelController.background.add(new WetTurtle(200, 217, -1, 130, 130));
+		background.add(new WetTurtle(700, 376, -1, 130, 130));
+		background.add(new WetTurtle(600, 217, -1, 130, 130));
+		background.add(new WetTurtle(400, 217, -1, 130, 130));
+		background.add(new WetTurtle(200, 217, -1, 130, 130));
 	}
 
 }

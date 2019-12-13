@@ -2,13 +2,13 @@ package element;
 
 import java.util.ArrayList;
 
-import interact.controller.LevelController;
+import interact.GameStage;
 import javafx.scene.image.Image;
 
 public class Zombie extends Actor {
 	private double speed;
-	
-	ArrayList<Image> image=new ArrayList<Image>();
+
+	ArrayList<Image> image = new ArrayList<Image>();
 
 	/**
 	 * Act.
@@ -27,11 +27,11 @@ public class Zombie extends Actor {
 			setImage(image.get(2));
 		} else if (temp == 3) {
 			setImage(image.get(3));
-		}else if (temp == 4) {
+		} else if (temp == 4) {
 			setImage(image.get(4));
-		}else if (temp == 5) {
+		} else if (temp == 5) {
 			setImage(image.get(5));
-		}else if (temp == 6) {
+		} else if (temp == 6) {
 			setImage(image.get(6));
 		}
 
@@ -42,37 +42,32 @@ public class Zombie extends Actor {
 			setX(600);
 	}
 
-
 	public Zombie(int xpos, int ypos, double s, int w, int h) {
-		for(int i=1;i<=7;i++) {
-			Image zombie=new Image("file:resource/img/zombie/z_1_0"+ String.valueOf(i)+".png", w, h, true, true);
+		for (int i = 1; i <= 7; i++) {
+			Image zombie = new Image("file:resource/img/zombie/z_1_0" + String.valueOf(i) + ".png", w, h, true, true);
 			image.add(zombie);
 		}
-		
-
 
 		setX(xpos);
 		setY(ypos);
 		speed = s;
 		setImage(image.get(2));
-		
+
 	}
 
-	
 	public Zombie() {
 	}
 
-
 	@Override
-	public void disPlay() {
-			// The first line of car
-			for (int i = 0; i < 4; i++) {
-				LevelController.background2.add(new Zombie( 100 + 150 * i, 570, -0.5, 100, 100));
-			}
-			
-			for (int i = 0; i < 3; i++) {
-				LevelController.background2.add(new Zombie( 100 + 150 * i, 340, -1.5, 100, 100));
-			}
+	public void disPlay(GameStage background) {
+		// The first line of car
+		for (int i = 0; i < 4; i++) {
+			background.add(new Zombie(100 + 150 * i, 570, -0.5, 100, 100));
+		}
+
+		for (int i = 0; i < 3; i++) {
+			background.add(new Zombie(100 + 150 * i, 340, -1.5, 100, 100));
+		}
 
 	}
 }

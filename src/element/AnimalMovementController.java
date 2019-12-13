@@ -78,9 +78,9 @@ public class AnimalMovementController extends Actor {
 					if (animal.noMove) {
 					} else {
 						if (event.getCode() == KeyCode.W) {
-							if (animal.getY() < animal.w) {
+							if (animal.getY() < Animal.w) {
 								animal.changeScore = true;
-								animal.w = animal.getY();
+								Animal.w = animal.getY();
 								animal.points += 10;
 							}
 

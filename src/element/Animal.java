@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import display.GameApp;
 import javafx.scene.image.Image;
-import p4_group_8_repo.KeepScore;
+import interact.GameStage;
 import interact.controller.LevelController;
 
 /**
@@ -14,7 +14,7 @@ import interact.controller.LevelController;
 public class Animal extends Actor {
 
 	public int points = 0;
-	private static int basePoints;
+	private int basePoints;
 	private int end = 0;
 	private int lose = 0;
 	private static int staticButton;
@@ -32,11 +32,13 @@ public class Animal extends Actor {
 	private boolean waterDeath = false;
 	public boolean changeScore = false;
 	private boolean enterNewWorld = false;
-	
+	private String imageLink="file:resource/img/froggerUp.png";
 
 	private int carD = 0;
 
 
+	private GameStage background;
+	
 	ArrayList<End> inter = new ArrayList<End>();
 
 	/**
@@ -44,7 +46,8 @@ public class Animal extends Actor {
 	 *
 	 * @param imageLink the image link
 	 */
-	public Animal(String imageLink) {
+	public Animal(GameStage background) {
+		this.background=background;
 		setImage(new Image(imageLink, IMG_SIZE, IMG_SIZE, true, true));
 		setX(300);
 		setY(730 + MOVEMENT);
@@ -239,8 +242,8 @@ public class Animal extends Actor {
 		setY(730 + MOVEMENT);
 		deathState = false;
 		// Life decreases when frogger lose.
-			LevelController.background2.remove(GameApp.health.get(lose));
-			LevelController.background.remove(GameApp.health.get(lose));
+			background.remove(GameApp.health.get(lose));
+			//LevelController.background.remove(GameApp.health.get(lose));
 		lose++;
 		carD = 0;
 		setImage(new Image("file:resource/img/froggerUp.png", IMG_SIZE, IMG_SIZE, true, true));

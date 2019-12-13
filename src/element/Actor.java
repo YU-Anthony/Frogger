@@ -3,10 +3,11 @@ package element;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.input.InputEvent;
-import p4_group_8_repo.GameStage;
-import p4_group_8_repo.World;
 
 import java.util.ArrayList;
+
+import display.World;
+import interact.GameStage;
 
 
 /**
@@ -116,7 +117,7 @@ public abstract class Actor extends ImageView{
      * with game level inputed.
      * @param gameLevel the game level
      */
-    public void disPlay(String gameLevel) {  	
+    public void disPlay(String gameLevel,GameStage background) {  	
     }
     
     /**

@@ -13,7 +13,7 @@ import interact.controller.LevelController;
 /**
  * Change between different scenes. Used in {@link GameLoseController},
  * {@link GameWinController},
- * {@link IndexController},{@link ScoreBoardController}
+ * {@link GameStartController},{@link ScoreBoardController}
  */
 public class SceneSwitch {
 	

@@ -2,11 +2,12 @@ package element;
 
 import java.util.ArrayList;
 
-import interact.controller.LevelController;
+import interact.GameStage;
 import javafx.scene.image.Image;
 
 public class Gangartuar extends Actor{
 	private double speed;
+	private GameStage background;
 	ArrayList<Image> image=new ArrayList<Image>();
 	
 	@Override
@@ -57,13 +58,13 @@ public class Gangartuar extends Actor{
 	
 	
 	@Override
-	public void disPlay() {
+	public void disPlay(GameStage background) {
 			for (int i = 0; i < 4; i++) {
-				LevelController.background2.add(new Gangartuar( 100 + 150 * i, 170, 1, 150, 150));
+				background.add(new Gangartuar( 100 + 150 * i, 170, 1, 150, 150));
 			}
 			
 			for (int i = 0; i < 3; i++) {
-				LevelController.background2.add(new Gangartuar( 100 + 150 * i, 440, 0.5, 150, 150));
+				background.add(new Gangartuar( 100 + 150 * i, 440, 0.5, 150, 150));
 			}
 
 	}

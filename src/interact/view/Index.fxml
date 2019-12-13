@@ -5,15 +5,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" stylesheets="@../../resources/css/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.IndexController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" stylesheets="@../../resources/css/style.css" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="interact.controller.GameStartController">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
             <Image url="@../../../resource/img/startbackground.png" />
          </image>
       </ImageView>
-      <Button fx:id="playButton" layoutX="-7.0" layoutY="563.0" mnemonicParsing="false" onAction="#changeToLevel" prefHeight="92.0" prefWidth="265.0" text="PLAY" />
-      <Button fx:id="informationButton" layoutX="152.0" layoutY="625.0" mnemonicParsing="false" onAction="#changeToInformation" prefHeight="92.0" prefWidth="295.0" text="INFO" textFill="WHITE" />
-      <Button fx:id="highScoreButton" layoutX="335.0" layoutY="702.0" mnemonicParsing="false" onAction="#changeToHighScore" prefHeight="92.0" prefWidth="250.0" text="SCORE" textFill="WHITE" />
+      <Button fx:id="playButton" layoutX="-30.0" layoutY="661.0" mnemonicParsing="false" onAction="#changeToLevel" prefHeight="92.0" prefWidth="265.0" text="PLAY" />
+      <Button fx:id="informationButton" layoutX="152.0" layoutY="661.0" mnemonicParsing="false" onAction="#changeToInformation" prefHeight="92.0" prefWidth="295.0" text="INFO" textFill="WHITE" />
+      <Button fx:id="highScoreButton" layoutX="355.0" layoutY="661.0" mnemonicParsing="false" onAction="#changeToHighScore" prefHeight="92.0" prefWidth="265.0" text="SCORE" textFill="WHITE" />
    </children>
 </AnchorPane>

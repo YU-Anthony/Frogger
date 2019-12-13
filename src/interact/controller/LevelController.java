@@ -1,11 +1,11 @@
 package interact.controller;
 
 import display.GameApp;
+import interact.GameStage;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import p4_group_8_repo.GameStage;
 
 /**
  * The Class LevelController controls action: <br>
@@ -13,8 +13,8 @@ import p4_group_8_repo.GameStage;
  */
 public class LevelController extends Application {
 
-	public static GameStage background = new GameStage();
-	public static GameStage background2 = new GameStage();
+	private  GameStage background = new GameStage();
+
 	private GameApp world;
 
 	public static Stage stage;
@@ -56,6 +56,7 @@ public class LevelController extends Application {
 
 	@FXML
 	protected void changeToSecret() throws Exception {
+		GameStage background2=new GameStage();
 
 		enterButton.setOnAction(e -> {
 
@@ -77,13 +78,13 @@ public class LevelController extends Application {
 	}
 	
 	public void generateWorld(GameStage background, Button button,String gameLevel) {
-		world = new GameApp();
+		world = new GameApp(background);
 		stage = (Stage) button.getScene().getWindow();
 		if(gameLevel.contentEquals("easy")) {
 			world.createEasyWorld(background,stage);
 		}else if(gameLevel.contentEquals("normal")) {
 			world.createNormalWorld(background,stage);
-		}else{
+		}else if(gameLevel.contentEquals("new")){
 			world.createNewWorld(background,stage);
 		}
 		

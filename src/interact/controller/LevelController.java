@@ -4,7 +4,9 @@ import display.GameApp;
 import interact.GameStage;
 import javafx.application.Application;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Alert.AlertType;
 import javafx.stage.Stage;
 
 /**
@@ -26,6 +28,8 @@ public class LevelController extends Application {
 	private Button normalButton;
 	@FXML
 	private Button enterButton;
+	@FXML
+	private Button secretButton;
 
 	/**
 	 * Change to {@code easy level} when click on {@code easyButton} <br>
@@ -63,7 +67,19 @@ public class LevelController extends Application {
 			generateWorld(background2,enterButton,"new");
 
 		});
+		
 
+	}
+	
+	@FXML
+	protected void information() throws Exception{
+		secretButton.setOnAction(event->{
+			Alert alert = new Alert(AlertType.INFORMATION);
+			alert.setTitle("Information");
+			alert.setHeaderText("This a hidden level !");
+			alert.setContentText("You can find it when playing other levels");
+			alert.show();
+		});
 	}
 
 	/**

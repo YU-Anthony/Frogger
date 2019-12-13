@@ -5,15 +5,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" stylesheets="@../../resources/css/style.css"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.LevelController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" stylesheets="@../../../resource/css/style.css" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="interact.controller.LevelController">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
             <Image url="@../../../resource/img/poster2.png" />
          </image>
       </ImageView>
-      <Button fx:id="secretButton" layoutX="146.0" layoutY="451.0" mnemonicParsing="false" prefHeight="92.0" prefWidth="329.0" text="SECRET" />
-      <Button fx:id="normalButton" layoutX="170.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeToNormal" prefHeight="92.0" prefWidth="279.0" text="NORMAL" />
-      <Button fx:id="easyButton" layoutX="200.0" layoutY="241.0" mnemonicParsing="false" onAction="#changeToEasy" prefHeight="92.0" prefWidth="220.0" text="EASY" />
+      <Button fx:id="secretButton" layoutX="146.0" layoutY="451.0" mnemonicParsing="false" onAction="#information" prefHeight="92.0" prefWidth="329.0" text="SECRET" />
+      <Button fx:id="normalButton" layoutX="139.0" layoutY="345.0" mnemonicParsing="false" onAction="#changeToNormal" prefHeight="92.0" prefWidth="343.0" text="NORMAL" />
+      <Button fx:id="easyButton" layoutX="177.0" layoutY="240.0" mnemonicParsing="false" onAction="#changeToEasy" prefHeight="92.0" prefWidth="267.0" text="EASY" />
    </children>
 </AnchorPane>

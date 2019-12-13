@@ -6,7 +6,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../../resources/css/gameWin.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.GameWinController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" stylesheets="@../../../resource/css/gameWin.css" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="interact.controller.GameWinController">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>

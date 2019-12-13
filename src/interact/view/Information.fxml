@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600"  xmlns:fx="http://javafx.com/fxml/1" fx:controller="interact.controller.GameStartController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="600" stylesheets="@../../../resource/css/style.css" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="interact.controller.GameStartController">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>

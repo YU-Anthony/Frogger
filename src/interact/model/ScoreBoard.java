@@ -178,7 +178,7 @@ public class ScoreBoard {
 		}
 	}
 
-	private ScoreBoard() {
+	ScoreBoard() {
 	}
 
 	public static ScoreBoard getInstance() {

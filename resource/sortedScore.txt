@@ -1,6 +1,1 @@
-960;hhh
-900;eee
-820;ppp
-330;280;ttt
-320;yyyyyyyyyyyyyyyyyyyyyyyyyy
-280;uji
+820;hhh

@@ -8,8 +8,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * The GameWin ask the winner to input their name. <br>
- * Used in {@link KeepScore}
+ * This class asks the winner to input their names. <br>
+ * Used in {@link display.KeepScore}
  */
 public class GameWin {
 

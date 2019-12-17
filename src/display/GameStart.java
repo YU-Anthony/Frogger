@@ -10,7 +10,9 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
- * This Class is used to start this game.
+ * This Class is used to start this application.
+ * <p>
+ * @author 	scyyz4 
  */
 public class GameStart extends Application {
 
@@ -20,7 +22,7 @@ public class GameStart extends Application {
 	/**
 	 * Generate the start scene.
 	 *
-	 * @param primaryStage the primary stage
+	 * @param primaryStage 	- Primary stage
 	 * @throws Exception the exception
 	 */
 	@Override
@@ -43,7 +45,7 @@ public class GameStart extends Application {
 	/**
 	 * The main method.
 	 *
-	 * @param args the arguments
+	 * @param args - the arguments
 	 */
 	public static void main(String[] args) {
 		launch(args);

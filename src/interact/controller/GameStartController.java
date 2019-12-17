@@ -6,8 +6,8 @@ import javafx.scene.control.Button;
 import interact.SceneSwitch;
 
 /**
- * The IndexController controllers four actions:
- * <p>
+ * This Controller controllers four actions:
+ * 
  * <ul>
  * <li>Change to {@code Level choose} page
  * <li>Change to {@code Information} page
@@ -27,7 +27,7 @@ public class GameStartController {
 	private Button highScoreButton;
 
 	/**
-	 * Instantiates a new index controller.
+	 * Instantiates a new controller.
 	 */
 	public GameStartController() {
 

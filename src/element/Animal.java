@@ -5,46 +5,87 @@ import java.util.ArrayList;
 import display.GameApp;
 import javafx.scene.image.Image;
 import interact.GameStage;
-import interact.controller.LevelController;
 
+// TODO: Auto-generated Javadoc
 /**
- * Define the actions for frogger, this class is implement in
+ * Define the actions and attributes for frogger, this class is implement in
  * {@link LevelController}.
+ */
+/**
+ * @author lenovo
+ *
+ */
+/**
+ * @author lenovo
+ *
  */
 public class Animal extends Actor {
 
+	/** The points. */
 	public int points = 0;
+	
+	/** The base points. */
 	private int basePoints;
+	
+	/** The end. */
 	private int end = 0;
+	
+	/** The lose. */
 	private int lose = 0;
+	
+	/** The static button. */
 	private static int staticButton;
+	
+	/** The button. */
 	private int button=0;
 
+	/** The no move. */
 	boolean noMove = false;
 
+	/** The Constant MOVEMENT. */
 	static final double MOVEMENT = 13.3333333 * 2;
+	
+	/** The Constant MOVEMENTX. */
 	static final double MOVEMENTX = 10.666666 * 2;
+	
+	/** The Constant IMG_SIZE. */
 	static final int IMG_SIZE = 40;
+	
+	/** The Constant NUM_OF_END. */
 	static final int NUM_OF_END = 5;
+	
+	/** The w. */
 	static double w = 730;
 
+	/** The car death. */
 	private boolean carDeath = false;
+	
+	/** The water death. */
 	private boolean waterDeath = false;
+	
+	/** The change score. */
 	public boolean changeScore = false;
+	
+	/** The enter new world. */
 	private boolean enterNewWorld = false;
+	
+	/** The image link. */
 	private String imageLink="file:resource/img/froggerUp.png";
 
+	/** The car D. */
 	private int carD = 0;
 
 
+	/** The background. */
 	private GameStage background;
 	
+	/** The inter. */
 	ArrayList<End> inter = new ArrayList<End>();
 
 	/**
-	 * Instantiates a frogger.
+	 * Instantiates a frogger within the current background.
 	 *
-	 * @param imageLink the image link
+	 * @param background - Current background
 	 */
 	public Animal(GameStage background) {
 		this.background=background;
@@ -89,7 +130,7 @@ public class Animal extends Actor {
 	}
 
 	/**
-	 * Gets the current points.
+	 * Gets the current points that player got.
 	 *
 	 * @return the points
 	 */
@@ -98,8 +139,11 @@ public class Animal extends Actor {
 	}
 
 	/**
-	 * Change score.
-	 *
+	 * Change score. 
+	 * <pre>
+	 * Once the frogger start to move, we will get a boolean true from this action and further change player's current score. 
+	 *</pre>
+	 *This method is used in {@link display.KeepScore} and {AnimalMovementController}.
 	 * @return true, if successful
 	 */
 	public boolean changeScore() {
@@ -112,10 +156,10 @@ public class Animal extends Actor {
 	}
 
 	/**
-	 * Return the number of death in {@link keepScore} so that so game ends when
+	 * Return the number of death in {@link display.KeepScore} so that so game ends when
 	 * health is consumed.
 	 *
-	 * @return the lose number
+	 * @return the number of frogger lose.
 	 */
 	public int loseNumber() {
 		return lose;
@@ -179,7 +223,7 @@ public class Animal extends Actor {
 
 
 	/**
-	 * Keep space and direction with items when this forger accrosing the river.
+	 * Keep space and direction with items when forger crossing the river.
 	 */
 	private void keepSpeed() {
 		if (getIntersectingObjects(Log.class).size() >= 1 && !noMove) {
@@ -232,7 +276,7 @@ public class Animal extends Actor {
 
 	/**
 	 * Before game stops, let the frogger goes back to the origin point once it
-	 * dies.
+	 * trigger {@code waterDeath} or {code carDeath}.
 	 *
 	 * @param deathState the death state
 	 * @param deathType  the death type
@@ -255,7 +299,16 @@ public class Animal extends Actor {
 		deathType = null;
 		deathState = false;
 	}
+	
+	
+	
 
+	/**
+	 * This function judge whether player trigger the Portal during the game in {@code KeepScore}
+	 *<br>
+	 *If yes, return true. And then enter a new level.
+	 * @return true, if successful
+	 */
 	public boolean enterWorld() {
 		if (getIntersectingObjects(Portal.class).size() >= 1 && !noMove) {		
 			enterNewWorld=true;
@@ -268,13 +321,21 @@ public class Animal extends Actor {
 	}
 	
 
+	/**
+	 * Gets the num secondflase.
+	 *
+	 * @return the num secondflase
+	 */
 	public int getNumSecondflase() {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
+	/**
+	 * Sets the num secondflase.
+	 *
+	 * @param i the new num secondflase
+	 */
 	public void setNumSecondflase(int i) {
-		// TODO Auto-generated method stub
 		
 	}
 

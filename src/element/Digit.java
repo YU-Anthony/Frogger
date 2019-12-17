@@ -19,13 +19,13 @@ public class Digit extends Actor {
 	}
 
 	/**
-	 * Determine the location of the initial scoreboard in {@link LevelController}
+	 * Determine the location of the initial scoreboard in {@link interact.controller.LevelController}
+	 * <br>
 	 * when generate a new game scene.
-	 *
-	 * @param n   the number
-	 * @param dim the image size
-	 * @param x   the horizontal axis
-	 * @param y   the vertical axis
+	 * @param n   - the number
+	 * @param dim - the image size
+	 * @param x   - the horizontal axis
+	 * @param y   - the vertical axis
 	 */
 	public Digit(int n, int dim, int x, int y) {
 

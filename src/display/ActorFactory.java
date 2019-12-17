@@ -12,16 +12,16 @@ import element.Zombie;
 
 /**
  * Class {@code ActoryFactory} abstract the actor instantiation process.
- * 
+ * ¡¶br¡·User can just input the kinds of the actor they want.
  * <p>
- * {@link Display} uses this class to create different actors such as
+ * {@link GameApp} uses this class to create different actors such as
  * {@code Log},{@code Obstacle},{@code}.
  */
 public class ActorFactory {
 	/**
 	 * Gets the type of actor.
 	 *
-	 * @param type the Actor type
+	 * @param type 		the Actor type
 	 * @return the actor
 	 */
 	public static Actor getActor(String type) {

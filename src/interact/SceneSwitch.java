@@ -11,9 +11,9 @@ import javafx.stage.Stage;
 import interact.controller.LevelController;
 
 /**
- * Change between different scenes. Used in {@link GameLoseController},
- * {@link GameWinController},
- * {@link GameStartController},{@link ScoreBoardController}
+ * Change between different scenes. Used in {@link interact.controller.GameLoseController},
+ * {@link interact.controller.GameWinController},
+ * {@link interact.controller.GameStartController},{@link interact.controller.ScoreBoardController}
  */
 public class SceneSwitch {
 	
@@ -22,8 +22,8 @@ public class SceneSwitch {
 	/**
 	 * Scene jump.
 	 *
-	 * @param buttonName the button name
-	 * @param url        the fxml name
+	 * @param buttonName - the button name
+	 * @param url        - the fxml name
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public void sceneJump(Button buttonName, String url) throws IOException {
@@ -39,6 +39,11 @@ public class SceneSwitch {
 	}
 	
 	
+	/**
+	 * Another type of Scene jumping. Just need to know the URL of fxml file.
+	 * @param url        - the fxml name
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public void sceneJumpTwo( String url) throws IOException {
 		Parent root = null;
 

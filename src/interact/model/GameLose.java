@@ -7,8 +7,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * The GameLose give choices {@code exit} or {@code restart} to users when the
+ * This class gives choices {@code exit} or {@code restart} to users when the
  * lose the game.
+ * <br> Player can choose to exit or restart game.
  */
 public class GameLose {
 
@@ -17,7 +18,7 @@ public class GameLose {
 
 	/**
 	 * Show up choices when user lose the game. <br>
-	 * Used in {@link keepScore.java}
+	 * Used in {@link display.KeepScore}
 	 *
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */

@@ -47,11 +47,11 @@ public class Turtle extends Actor {
 	/**
 	 * Instantiates a new turtle with specific parameters.
 	 *
-	 * @param xpos the x position
-	 * @param ypos the y position
-	 * @param s    the speed
-	 * @param w    the image width
-	 * @param h    the image height
+	 * @param xpos - the x position
+	 * @param ypos - the y position
+	 * @param s    - the speed
+	 * @param w    - the image width
+	 * @param h    - the image height
 	 */
 	public Turtle(int xpos, int ypos, int s, int w, int h) {
 
@@ -74,7 +74,7 @@ public class Turtle extends Actor {
 	 * Inherit this method from {@link Actor} to generate pre-defined
 	 * {@code Turtle}.
 	 * <p>
-	 * This method will be called in {@link Display} and the {@code Turtle} will be
+	 * This method will be called in {@link display.GameApp} and the {@code Turtle} will be
 	 * displayed in easy game level.
 	 */
 	@Override

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="wpsangola" name="EndTest" skipped="0" tests="1" time="0.0" timestamp="2019-12-14T03:47:28">
+  <properties>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
+    <property name="ant.library.dir" value="C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402\lib" />
+    <property name="env.NUMBER_OF_PROCESSORS" value="12" />
+    <property name="java.specification.version" value="10" />
+    <property name="env.USERPROFILE" value="C:\Users\scyyz4" />
+    <property name="ant.project.name" value="The_Frogger" />
+    <property name="sun.cpu.isalist" value="amd64" />
+    <property name="sun.jnu.encoding" value="Cp1252" />
+    <property name="osgi.nl" value="en_GB" />
+    <property name="osgi.syspath" value="c:\eclipse-java\plugins" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="equinox.init.uuid" value="true" />
+    <property name="osgi.instance.area.default" value="file:/C:/Users/scyyz4/eclipse-workspace/" />
+    <property name="debuglevel" value="source,lines,vars" />
+    <property name="eclipse.vmargs" value="-Dosgi.requiredJavaVersion=1.8&#xa;-Dosgi.instance.area.default=@user.home/eclipse-workspace&#xa;-XX:+UseG1GC&#xa;-XX:+UseStringDeduplication&#xa;--add-modules=ALL-SYSTEM&#xa;-Dosgi.requiredJavaVersion=1.8&#xa;-Dosgi.dataAreaRequiresExplicitInit=true&#xa;-Xms256m&#xa;-Xmx1024m&#xa;--add-modules=ALL-SYSTEM&#xa;-Djava.class.path=C:\eclipse-java\\plugins/org.eclipse.equinox.launcher_1.5.400.v20190515-0925.jar&#xa;" />
+    <property name="env.FPS_BROWSER_APP_PROFILE_STRING" value="Internet Explorer" />
+    <property name="ds.delayed.keepInstances.default" value="true" />
+    <property name="env.CommonProgramW6432" value="C:\Program Files\Common Files" />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="org.osgi.framework.system.capabilities" value="osgi.ee; osgi.ee=&quot;OSGi/Minimum&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1, 1.2&quot;, osgi.ee; osgi.ee=&quot;JRE&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1&quot;, osgi.ee; osgi.ee=&quot;JavaSE&quot;; version:List&lt;Version&gt;=&quot;1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 9.0, 10.0&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact1&quot;; version:List&lt;Version&gt;=&quot;1.8, 9.0, 10.0&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact2&quot;; version:List&lt;Version&gt;=&quot;1.8, 9.0, 10.0&quot;,osgi.ee; osgi.ee=&quot;JavaSE/compact3&quot;; version:List&lt;Version&gt;=&quot;1.8, 9.0, 10.0&quot;" />
+    <property name="env.UATDATA" value="C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77" />
+    <property name="user.country.format" value="CN" />
+    <property name="env.OS" value="Windows_NT" />
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-10.0.1\bin" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner EndTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,Z:\SM\esciple\The_Frogger\junit\TEST-EndTest.xml crashfile=Z:\SM\esciple\The_Frogger\junitvmwatcher14799613506693254499.properties propsfile=Z:\SM\esciple\The_Frogger\junit15945623541239482378.properties" />
+    <property name="jdk.debug" value="release" />
+    <property name="org.eclipse.equinox.launcher.splash.location" value="C:\eclipse-java\\plugins\org.eclipse.epp.package.common_4.12.0.20190614-1200\splash.bmp" />
+    <property name="org.osgi.supports.framework.requirebundle" value="true" />
+    <property name="env.ComSpec" value="C:\WINDOWS\system32\cmd.exe" />
+    <property name="osgi.arch" value="x86_64" />
+    <property name="org.eclipse.equinox.simpleconfigurator.configUrl" value="file:org.eclipse.equinox.simpleconfigurator/bundles.info" />
+    <property name="eclipse.pdebuild.templates" value="C:\eclipse-java\plugins\org.eclipse.pde.build_3.10.400.v20190320-1020\templates" />
+    <property name="org.osgi.framework.system.packages" value="com.oracle.awt, com.oracle.net, com.oracle.nio, com.oracle.tools.packager, com.sun.jarsigner, com.sun.java.accessibility.util, com.sun.javadoc, com.sun.javafx.tools.packager, com.sun.javafx.tools.packager.bundlers, com.sun.javafx.tools.resource, com.sun.jdi, com.sun.jdi.connect, com.sun.jdi.connect.spi, com.sun.jdi.event, com.sun.jdi.request, com.sun.management, com.sun.net.httpserver, com.sun.net.httpserver.spi, com.sun.nio.file, com.sun.nio.sctp, com.sun.security.auth, com.sun.security.auth.callback, com.sun.security.auth.login, com.sun.security.auth.module, com.sun.security.jgss, com.sun.source.doctree, com.sun.source.tree, com.sun.source.util, com.sun.tools.attach, com.sun.tools.attach.spi, com.sun.tools.javac, com.sun.tools.javadoc, com.sun.tools.jconsole, java.applet, java.awt, java.awt.color, java.awt.datatransfer, java.awt.desktop, java.awt.dnd, java.awt.event, java.awt.font, java.awt.geom, java.awt.im, java.awt.im.spi, java.awt.image, java.awt.image.renderable, java.awt.print, java.beans, java.beans.beancontext, java.io, java.lang, java.lang.annotation, java.lang.instrument, java.lang.invoke, java.lang.management, java.lang.module, java.lang.ref, java.lang.reflect, java.math, java.net, java.net.spi, java.nio, java.nio.channels, java.nio.channels.spi, java.nio.charset, java.nio.charset.spi, java.nio.file, java.nio.file.attribute, java.nio.file.spi, java.rmi, java.rmi.activation, java.rmi.dgc, java.rmi.registry, java.rmi.server, java.security, java.security.acl, java.security.cert, java.security.interfaces, java.security.spec, java.sql, java.text, java.text.spi, java.time, java.time.chrono, java.time.format, java.time.temporal, java.time.zone, java.util, java.util.concurrent, java.util.concurrent.atomic, java.util.concurrent.locks, java.util.function, java.util.jar, java.util.logging, java.util.prefs, java.util.regex, java.util.spi, java.util.stream, java.util.zip, javafx.animation, javafx.application, javafx.beans, javafx.beans.binding, javafx.beans.property, javafx.beans.property.adapter, javafx.beans.value, javafx.collections, javafx.collections.transformation, javafx.concurrent, javafx.css, javafx.css.converter, javafx.embed.swing, javafx.event, javafx.fxml, javafx.geometry, javafx.print, javafx.scene, javafx.scene.canvas, javafx.scene.chart, javafx.scene.control, javafx.scene.control.cell, javafx.scene.control.skin, javafx.scene.effect, javafx.scene.image, javafx.scene.input, javafx.scene.layout, javafx.scene.media, javafx.scene.paint, javafx.scene.shape, javafx.scene.text, javafx.scene.transform, javafx.scene.web, javafx.stage, javafx.util, javafx.util.converter, javax.accessibility, javax.activation, javax.activity, javax.annotation, javax.annotation.processing, javax.crypto, javax.crypto.interfaces, javax.crypto.spec, javax.imageio, javax.imageio.event, javax.imageio.metadata, javax.imageio.plugins.bmp, javax.imageio.plugins.jpeg, javax.imageio.plugins.tiff, javax.imageio.spi, javax.imageio.stream, javax.jnlp, javax.jws, javax.jws.soap, javax.lang.model, javax.lang.model.element, javax.lang.model.type, javax.lang.model.util, javax.management, javax.management.loading, javax.management.modelmbean, javax.management.monitor, javax.management.openmbean, javax.management.relation, javax.management.remote, javax.management.remote.rmi, javax.management.timer, javax.naming, javax.naming.directory, javax.naming.event, javax.naming.ldap, javax.naming.spi, javax.net, javax.net.ssl, javax.print, javax.print.attribute, javax.print.attribute.standard, javax.print.event, javax.rmi, javax.rmi.CORBA, javax.rmi.ssl, javax.script, javax.security.auth, javax.security.auth.callback, javax.security.auth.kerberos, javax.security.auth.login, javax.security.auth.spi, javax.security.auth.x500, javax.security.cert, javax.security.sasl, javax.smartcardio, javax.sound.midi, javax.sound.midi.spi, javax.sound.sampled, javax.sound.sampled.spi, javax.sql, javax.sql.rowset, javax.sql.rowset.serial, javax.sql.rowset.spi, javax.swing, javax.swing.border, javax.swing.colorchooser, javax.swing.event, javax.swing.filechooser, javax.swing.plaf, javax.swing.plaf.basic, javax.swing.plaf.metal, javax.swing.plaf.multi, javax.swing.plaf.nimbus, javax.swing.plaf.synth, javax.swing.table, javax.swing.text, javax.swing.text.html, javax.swing.text.html.parser, javax.swing.text.rtf, javax.swing.tree, javax.swing.undo, javax.tools, javax.transaction, javax.transaction.xa, javax.xml, javax.xml.bind, javax.xml.bind.annotation, javax.xml.bind.annotation.adapters, javax.xml.bind.attachment, javax.xml.bind.helpers, javax.xml.bind.util, javax.xml.catalog, javax.xml.crypto, javax.xml.crypto.dom, javax.xml.crypto.dsig, javax.xml.crypto.dsig.dom, javax.xml.crypto.dsig.keyinfo, javax.xml.crypto.dsig.spec, javax.xml.datatype, javax.xml.namespace, javax.xml.parsers, javax.xml.soap, javax.xml.stream, javax.xml.stream.events, javax.xml.stream.util, javax.xml.transform, javax.xml.transform.dom, javax.xml.transform.sax, javax.xml.transform.stax, javax.xml.transform.stream, javax.xml.validation, javax.xml.ws, javax.xml.ws.handler, javax.xml.ws.handler.soap, javax.xml.ws.http, javax.xml.ws.soap, javax.xml.ws.spi, javax.xml.ws.spi.http, javax.xml.ws.wsaddressing, javax.xml.xpath, jdk.dynalink, jdk.dynalink.beans, jdk.dynalink.linker, jdk.dynalink.linker.support, jdk.dynalink.support, jdk.incubator.http, jdk.javadoc.doclet, jdk.jfr, jdk.jfr.consumer, jdk.jshell, jdk.jshell.execution, jdk.jshell.spi, jdk.jshell.tool, jdk.management.cmm, jdk.management.jfr, jdk.management.resource, jdk.nashorn.api.scripting, jdk.nashorn.api.tree, jdk.net, jdk.packager.services, jdk.packager.services.singleton, jdk.security.jarsigner, netscape.javascript, org.ietf.jgss, org.omg.CORBA, org.omg.CORBA.DynAnyPackage, org.omg.CORBA.ORBPackage, org.omg.CORBA.TypeCodePackage, org.omg.CORBA.portable, org.omg.CORBA_2_3, org.omg.CORBA_2_3.portable, org.omg.CosNaming, org.omg.CosNaming.NamingContextExtPackage, org.omg.CosNaming.NamingContextPackage, org.omg.Dynamic, org.omg.DynamicAny, org.omg.DynamicAny.DynAnyFactoryPackage, org.omg.DynamicAny.DynAnyPackage, org.omg.IOP, org.omg.IOP.CodecFactoryPackage, org.omg.IOP.CodecPackage, org.omg.Messaging, org.omg.PortableInterceptor, org.omg.PortableInterceptor.ORBInitInfoPackage, org.omg.PortableServer, org.omg.PortableServer.CurrentPackage, org.omg.PortableServer.POAManagerPackage, org.omg.PortableServer.POAPackage, org.omg.PortableServer.ServantLocatorPackage, org.omg.PortableServer.portable, org.omg.SendingContext, org.omg.stub.java.rmi, org.w3c.dom, org.w3c.dom.bootstrap, org.w3c.dom.css, org.w3c.dom.events, org.w3c.dom.html, org.w3c.dom.ls, org.w3c.dom.ranges, org.w3c.dom.stylesheets, org.w3c.dom.traversal, org.w3c.dom.views, org.w3c.dom.xpath, org.xml.sax, org.xml.sax.ext, org.xml.sax.helpers, sun.misc, sun.reflect" />
+    <property name="org.osgi.framework.language" value="en" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="env.PRINTER" value="YES" />
+    <property name="gosh.args" value="--nointeractive" />
+    <property name="eclipse.application" value="org.eclipse.ui.ide.workbench" />
+    <property name="java.version.date" value="2018-04-17" />
+    <property name="eclipse.launcher.name" value="Eclipse" />
+    <property name="java.home" value="C:\Program Files\Java\jdk-10.0.1" />
+    <property name="env.ProgramFiles" value="C:\Program Files" />
+    <property name="basedir" value="Z:\SM\esciple\The_Frogger" />
+    <property name="file.separator" value="\" />
+    <property name="java.vm.compressedOopsMode" value="Zero based" />
+    <property name="line.separator" value="&#xd;&#xa;" />
+    <property name="org.osgi.framework.executionenvironment" value="OSGi/Minimum-1.0, OSGi/Minimum-1.1, OSGi/Minimum-1.2, JavaSE/compact1-1.8, JavaSE/compact2-1.8, JavaSE/compact3-1.8, JRE-1.1, J2SE-1.2, J2SE-1.3, J2SE-1.4, J2SE-1.5, JavaSE-1.6, JavaSE-1.7, JavaSE-1.8, JavaSE-9, JavaSE-10" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="osgi.compatibility.bootdelegation.default" value="true" />
+    <property name="env.LOCALAPPDATA" value="C:\Users\scyyz4\AppData\Local" />
+    <property name="eclipse.buildId" value="4.12.0.I20190605-1800" />
+    <property name="env.USERDOMAIN_ROAMINGPROFILE" value="AD" />
+    <property name="env.PROCESSOR_REVISION" value="9e0a" />
+    <property name="user.script" value="" />
+    <property name="env.PSModulePath" value="C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="env.PROCESSOR_IDENTIFIER" value="Intel64 Family 6 Model 158 Stepping 10, GenuineIntel" />
+    <property name="java.runtime.version" value="10.0.1+10" />
+    <property name="org.eclipse.swt.internal.deviceZoom" value="100" />
+    <property name="user.name" value="scyyz4" />
+    <property name="env.DriverData" value="C:\Windows\System32\Drivers\DriverData" />
+    <property name="env.ProgramW6432" value="C:\Program Files" />
+    <property name="osgi.framework.useSystemProperties" value="true" />
+    <property name="env.CommonProgramFiles" value="C:\Program Files\Common Files" />
+    <property name="org.osgi.framework.vendor" value="Eclipse" />
+    <property name="env.PUBLIC" value="C:\Users\Public" />
+    <property name="file.encoding" value="Cp1252" />
+    <property name="java.vendor.version" value="18.3" />
+    <property name="osgi.framework.extensions" value="reference:file:org.eclipse.osgi.compatibility.state_1.1.500.v20190516-1407.jar,reference:file:org.eclipse.fx.osgi_3.5.0.201902220600.jar" />
+    <property name="env.COMPUTERNAME" value="WPSANGOLA" />
+    <property name="env.HOMEPATH" value="\" />
+    <property name="env.SystemDrive" value="C:" />
+    <property name="env.APPDATA" value="C:\Users\scyyz4\AppData\Roaming" />
+    <property name="env.VBOX_MSI_INSTALL_PATH" value="C:\Program Files\Oracle\VirtualBox\" />
+    <property name="env.ProgramData" value="C:\ProgramData" />
+    <property name="eclipse.home.location" value="file:/C:/eclipse-java/" />
+    <property name="java.io.tmpdir" value="C:\Users\scyyz4\AppData\Local\Temp\" />
+    <property name="java.version" value="10.0.1" />
+    <property name="env.HOMEDRIVE" value="Z:" />
+    <property name="env.PROCESSOR_LEVEL" value="6" />
+    <property name="env.Path" value="C:/Program Files/Java/jdk-10.0.1/bin/server;C:/Program Files/Java/jdk-10.0.1/bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Haskell\bin;C:\Program Files\Haskell Platform\8.4.3\lib\extralibs\bin;C:\Program Files\Haskell Platform\8.4.3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2019a\runtime\win64;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Haskell Platform\8.4.3\mingw\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\cabal\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\local\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-10.0.1\bin;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\scyyz4\AppData\Local\Microsoft\WindowsApps;;C:\eclipse-java;" />
+    <property name="env.TMP" value="C:\Users\scyyz4\AppData\Local\Temp" />
+    <property name="osgi.bundles.defaultStartLevel" value="4" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob" />
+    <property name="ant.home" value="C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402" />
+    <property name="sun.os.patch.level" value="" />
+    <property name="env.HOMESHARE" value="\\UON2\Users03\4\scyyz4" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.5 compiled on July 10 2018" />
+    <property name="eclipse.running" value="true" />
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-10.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/Program Files/Java/jdk-10.0.1/bin/server;C:/Program Files/Java/jdk-10.0.1/bin;C:\ProgramData\Anaconda3;C:\ProgramData\Anaconda3\Library\mingw-w64\bin;C:\ProgramData\Anaconda3\Library\usr\bin;C:\ProgramData\Anaconda3\Library\bin;C:\ProgramData\Anaconda3\Scripts;C:\Program Files\Haskell\bin;C:\Program Files\Haskell Platform\8.4.3\lib\extralibs\bin;C:\Program Files\Haskell Platform\8.4.3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\MATLAB\R2019a\runtime\win64;C:\Program Files\MATLAB\R2019a\bin;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Haskell Platform\8.4.3\mingw\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\cabal\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Roaming\local\bin;C:\WINDOWS\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Java\jdk-10.0.1\bin;C:\Program Files\IBM\SPSS\Statistics\25\JRE\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Users\scyyz4\AppData\Local\Microsoft\WindowsApps;;C:\eclipse-java;;." />
+    <property name="eclipse.pdebuild.scripts" value="C:\eclipse-java\plugins\org.eclipse.pde.build_3.10.400.v20190320-1020\scripts" />
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="osgi.requiredJavaVersion" value="1.8" />
+    <property name="env.LOGONSERVER" value="\\UIWDCUPK10" />
+    <property name="org.eclipse.debug.ui.breakpoints.toggleFactoriesUsed" value="false" />
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle" />
+    <property name="ant.file.The_Frogger" value="Z:\SM\esciple\The_Frogger\build.xml" />
+    <property name="eclipse.stateSaveDelayInterval" value="30000" />
+    <property name="sun.desktop" value="windows" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="env.SnowOU" value="School Computer Rooms" />
+    <property name="org.osgi.framework.version" value="1.9.0" />
+    <property name="env.USERDNSDOMAIN" value="AD.NOTTINGHAM.AC.UK" />
+    <property name="java.class.path" value="Z:\SM\esciple\The_Frogger\bin1;C:\eclipse-java\plugins\org.junit.jupiter.api_5.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.jupiter.engine_5.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.jupiter.migrationsupport_5.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.jupiter.params_5.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.platform.commons_1.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.platform.engine_1.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.platform.launcher_1.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.platform.runner_1.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.platform.suite.api_1.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit.vintage.engine_5.4.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.opentest4j_1.1.1.v20190212-2109.jar;C:\eclipse-java\plugins\org.apiguardian_1.0.0.v20190212-2109.jar;C:\eclipse-java\plugins\org.junit_4.12.0.v201504281640\junit.jar;C:\eclipse-java\plugins\org.hamcrest.core_1.3.0.v20180420-1519.jar;C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402\lib\ant-launcher.jar;C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402\lib\ant.jar;C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402\lib\ant-junit.jar;C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402\lib\ant-junit4.jar" />
+    <property name="source" value="10" />
+    <property name="java.vm.vendor" value="&quot;Oracle Corporation&quot;" />
+    <property name="env.PROCESSOR_ARCHITECTURE" value="AMD64" />
+    <property name="user.variant" value="" />
+    <property name="env.snow_agent" value="C:\Program Files\Snow Software\Inventory\Agent" />
+    <property name="user.timezone" value="" />
+    <property name="org.osgi.framework.uuid" value="98cd1af9-f2ec-4e20-b9ff-18c188e0dda5" />
+    <property name="env.SystemRoot" value="C:\WINDOWS" />
+    <property name="os.name" value="Windows 10" />
+    <property name="java.vm.specification.version" value="10" />
+    <property name="org.osgi.framework.processor" value="x86-64" />
+    <property name="user.country" value="GB" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.USERDOMAIN" value="AD" />
+    <property name="env.=::" value="::\" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="osgi.logfile" value="Z:\SM\esciple\.metadata\.log" />
+    <property name="user.home" value="C:\Users\scyyz4" />
+    <property name="osgi.install.area" value="file:/C:/eclipse-java/" />
+    <property name="user.language" value="en" />
+    <property name="osgi.tracefile" value="Z:\SM\esciple\.metadata\trace.log" />
+    <property name="env.VS140COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\" />
+    <property name="eclipse.home" value="C:\eclipse-java" />
+    <property name="eclipse.pdebuild.home" value="C:\eclipse-java\plugins\org.eclipse.pde.build_3.10.400.v20190320-1020\." />
+    <property name="env.ALLUSERSPROFILE" value="C:\ProgramData" />
+    <property name="ant.java.version" value="10" />
+    <property name="env.SESSIONNAME" value="Console" />
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment" />
+    <property name="ant.file.type.The_Frogger" value="file" />
+    <property name="ds.delayed.keepInstances" value="true" />
+    <property name="eclipse.product" value="org.eclipse.epp.package.java.product" />
+    <property name="eclipse.vm" value="C:\Program Files\Java\jdk-10.0.1\bin\server\jvm.dll" />
+    <property name="env.windir" value="C:\WINDOWS" />
+    <property name="eclipse.commands" value="-os&#xa;win32&#xa;-ws&#xa;win32&#xa;-arch&#xa;x86_64&#xa;-showsplash&#xa;C:\eclipse-java\\plugins\org.eclipse.epp.package.common_4.12.0.20190614-1200\splash.bmp&#xa;-launcher&#xa;C:\eclipse-java\eclipse.exe&#xa;-name&#xa;Eclipse&#xa;--launcher.library&#xa;C:\eclipse-java\\plugins/org.eclipse.equinox.launcher.win32.win32.x86_64_1.1.1000.v20190125-2016\eclipse_1801.dll&#xa;-startup&#xa;C:\eclipse-java\\plugins/org.eclipse.equinox.launcher_1.5.400.v20190515-0925.jar&#xa;--launcher.appendVmargs&#xa;-product&#xa;org.eclipse.epp.package.java.product&#xa;-vm&#xa;C:\Program Files\Java\jdk-10.0.1\bin\server\jvm.dll&#xa;" />
+    <property name="ant.file" value="Z:\SM\esciple\The_Frogger\build.xml" />
+    <property name="path.separator" value=";" />
+    <property name="osgi.compatibility.bootdelegation" value="true" />
+    <property name="os.version" value="10.0" />
+    <property name="env.CommonProgramFiles(x86)" value="C:\Program Files (x86)\Common Files" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="env.PATHEXT" value=".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC" />
+    <property name="org.osgi.supports.framework.fragment" value="true" />
+    <property name="osgi.bundles" value="reference:file:org.eclipse.osgi.compatibility.state_1.1.500.v20190516-1407.jar,reference:file:org.eclipse.fx.osgi_3.5.0.201902220600.jar,reference:file:org.eclipse.equinox.simpleconfigurator_1.3.200.v20181101-1115.jar@1:start" />
+    <property name="ant.project.invoked-targets" value="EndTest" />
+    <property name="osgi.framework.shape" value="jar" />
+    <property name="eclipse.p2.profile" value="epp.package.java" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="osgi.framework" value="file:/c:/eclipse-java/plugins/org.eclipse.osgi_3.14.0.v20190517-1309.jar" />
+    <property name="ECLIPSE_HOME" value="C:/eclipse-java/" />
+    <property name="osgi.configuration.area" value="file:/C:/eclipse-java/configuration/" />
+    <property name="osgi.dataAreaRequiresExplicitInit" value="true" />
+    <property name="ant.core.lib" value="C:\eclipse-java\plugins\org.apache.ant_1.10.5.v20190526-1402\lib\ant.jar" />
+    <property name="osgi.os" value="win32" />
+    <property name="osgi.splashLocation" value="C:\eclipse-java\\plugins\org.eclipse.epp.package.common_4.12.0.20190614-1200\splash.bmp" />
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/" />
+    <property name="org.osgi.framework.os.name" value="Windows10" />
+    <property name="org.eclipse.m2e.log.dir" value="Z:\SM\esciple\.metadata\.plugins\org.eclipse.m2e.logback.configuration" />
+    <property name="org.osgi.supports.framework.extension" value="true" />
+    <property name="applicationXMI" value="org.eclipse.ui.workbench/LegacyIDE.e4xmi" />
+    <property name="osgi.splashPath" value="platform:/base/plugins/org.eclipse.platform" />
+    <property name="org.osgi.framework.storage" value="C:\eclipse-java\configuration" />
+    <property name="user.dir" value="C:\eclipse-java" />
+    <property name="env.USERNAME" value="scyyz4" />
+    <property name="os.arch" value="amd64" />
+    <property name="osgi.ws" value="win32" />
+    <property name="osgi.instance.area" value="file:/Z:/SM/esciple/" />
+    <property name="eclipse.launcher" value="C:\eclipse-java\eclipse.exe" />
+    <property name="user.language.format" value="zh" />
+    <property name="osgi.frameworkClassPath" value="., file:c:/eclipse-java/plugins/org.eclipse.osgi.compatibility.state_1.1.500.v20190516-1407.jar, file:c:/eclipse-java/plugins/org.eclipse.fx.osgi_3.5.0.201902220600.jar" />
+    <property name="target" value="10" />
+    <property name="eclipse.startTime" value="1576285492621" />
+    <property name="env.ProgramFiles(x86)" value="C:\Program Files (x86)" />
+    <property name="org.osgi.framework.os.version" value="10.0.0" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="java.vm.version" value="10.0.1+10" />
+    <property name="eclipse.p2.data.area" value="@config.dir/../p2/" />
+    <property name="env.FPS_BROWSER_USER_PROFILE_STRING" value="Default" />
+    <property name="env.TEMP" value="C:\Users\scyyz4\AppData\Local\Temp" />
+    <property name="org.apache.commons.logging.Log" value="org.apache.commons.logging.impl.NoOpLog" />
+    <property name="java.class.version" value="54.0" />
+    <property name="ant.project.default-target" value="build" />
+  </properties>
+  <error message="EndTest" type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException: EndTest
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:582)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:190)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:499)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:374)
+</error>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

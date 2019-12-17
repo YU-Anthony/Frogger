@@ -3,7 +3,7 @@ package element;
 import javafx.scene.image.Image;
 
 /**
- * The Class AngryShark.
+ * The Class AngryShark define all actions and attributes of the actor {@code AngryShark}}.
  */
 public class AngryShark extends Actor {
 

@@ -7,7 +7,8 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 /**
- * The Class MyStage: Used as background to combine different actors.
+ * The Class MyStage: It's the basement of this game, used as background to combine different actors.
+ * @author scyyz4
  */
 public class GameStage extends World {
 
@@ -24,7 +25,7 @@ public class GameStage extends World {
 	}
 
 	/**
-	 * Instantiates a new my stage.
+	 * Instantiates a new background.
 	 */
 	public GameStage() {
 	}
@@ -32,7 +33,7 @@ public class GameStage extends World {
 	/**
 	 * Play music.
 	 *
-	 * @param music the music
+	 * @param music - the path of music
 	 */
 	public void playMusic(String music) {
 		String musicFile = music;

@@ -5,11 +5,26 @@ import java.util.ArrayList;
 import interact.GameStage;
 import javafx.scene.image.Image;
 
+/**
+ * This class define all actions and attributes about Gangartuar.
+ * @version -html5
+ */
 public class Gangartuar extends Actor{
+	
+	/** The speed. */
 	private double speed;
+	
+	/** The background. */
 	private GameStage background;
+	
+	/** The image. */
 	ArrayList<Image> image=new ArrayList<Image>();
 	
+	/**
+	 * Act.
+	 *
+	 * @param now the now
+	 */
 	@Override
 	public void act(long now) {
 		long temp = now / 900000000 % 8;
@@ -39,9 +54,16 @@ public class Gangartuar extends Actor{
 			setX(600);
 	}
 	
+	/**
+	 * Instantiates gangartuars with specccific parameters.
+	 *
+	 * @param xpos - the horizonal position
+	 * @param ypos - the vertical position
+	 * @param s - the speed
+	 * @param w - the width
+	 * @param h - the height
+	 */
 	public Gangartuar(int xpos, int ypos, double s, int w, int h) {
-		
-		
 		for(int i=1;i<=8;i++) {
 			Image zombie=new Image("file:resource/img/zombie/Gargantuar_"+ String.valueOf(i)+".png", w, h, true, true);
 			image.add(zombie);
@@ -54,9 +76,17 @@ public class Gangartuar extends Actor{
 		
 	}
 	
+	/**
+	 * Instantiates a new gangartuar without parameters.
+	 */
 	public Gangartuar(){}
 	
 	
+	/**
+	 * Display the Gangartuar. This method will be called in {@link display.GameApp}.
+	 *
+	 * @param background - Current background
+	 */
 	@Override
 	public void disPlay(GameStage background) {
 			for (int i = 0; i < 4; i++) {

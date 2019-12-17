@@ -8,7 +8,7 @@ import javafx.scene.image.Image;
  * This Class inherit {@link Actor} and is displayed in {@link LevelController}.
  * 
  * <p>
- * This class define all attributes and actions of {@code Car} and
+ * It also defines all attributes and actions of {@code Car} and
  * {@code Truck}.
  */
 public class Obstacle extends Actor {
@@ -30,14 +30,14 @@ public class Obstacle extends Actor {
 	}
 
 	/**
-	 * Instantiates a new obstacle.
+	 * Instantiates a new obstacle with specific parameters.
 	 *
-	 * @param imageLink the image link
-	 * @param xpos      the horizontal position
-	 * @param ypos      the vertical position
-	 * @param s         the speed
-	 * @param w         the width
-	 * @param h         the height
+	 * @param imageLink - the image link
+	 * @param xpos      - the horizontal position
+	 * @param ypos      - the vertical position
+	 * @param s         - the speed
+	 * @param w         - the width
+	 * @param h         - the height
 	 */
 	public Obstacle(String imageLink, int xpos, int ypos, int s, int w, int h) {
 		setImage(new Image(imageLink, w, h, true, true));
@@ -56,10 +56,10 @@ public class Obstacle extends Actor {
 	 * Inherit this method from {@link Actor} to generate pre-defined {@code car}
 	 * and {@code Truck}.
 	 * <p>
-	 * This method will be called in {@link Display} and the {@code car} and
+	 * This method will be called in {@link display.GameApp} and the {@code car} and
 	 * {@code Truck} will be displayed in easy game level.
 	 * 
-	 * @param gameLevel the game level
+	 * @param gameLevel - the game level
 	 */
 	@Override
 	public void disPlay(String gameLevel,GameStage background) {

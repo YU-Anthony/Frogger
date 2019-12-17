@@ -16,19 +16,30 @@ import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.util.Duration;
 
-
-
+// TODO: Auto-generated Javadoc
 
 /**
- * Display different game level by using {@code ActorFactory}.
+ * Display different game level by using {@code ActorFactory}. 
+ * <br> Besides, this class also display {@code End}, {@code HealthPoint} and {@code Score}  
+ * 
+ * @author 	scyyz4 
+ *
  */
 public class GameApp {
 	
+	/** The animal. */
 	private Animal animal;
 	
+	/** The stage. */
 	public static Stage stage;
+	
+	/** The music 1. */
 	private String music1 = "resource/music/Frogger Main Song Theme (loop).mp3";
+	
+	/** The music 2. */
 	private String music2 = "resource/music/SpongBob.mp3";
+	
+	/** The music 3. */
 	private String music3 = "resource/music/Grasswalk.mp3";
 
 	/** The health. */
@@ -38,9 +49,10 @@ public class GameApp {
 	private GameStage background;
 
 	/**
-	 * Generates the easy world.
+	 * Generates the easy world based current GameStage and Stage.
 	 *
-	 * @param bg the background
+	 * @param bg 		Current background
+	 * @param stage 	Current stage
 	 */
 	public void createEasyWorld(GameStage bg, Stage stage) {
 
@@ -65,9 +77,10 @@ public class GameApp {
 	}
 
 	/**
-	 * Generates the normal world.
+	 * Generates the normal world based current GameStage and Stage.
 	 *
-	 * @param bg the background
+	 * @param bg 		Current background
+	 * @param stage 	Current stage
 	 */
 	public void createNormalWorld(GameStage bg,Stage stage) {
 		
@@ -91,6 +104,12 @@ public class GameApp {
 		stageDisplay(bg,stage,music2);
 	}
 
+	/**
+	 * Generates the secret world based current GameStage and Stage.
+	 *
+	 * @param bg2 		Current background
+	 * @param stage 	Current stage
+	 */
 	public void createNewWorld(GameStage bg2,Stage stage) {
 		BackgroundImage froggerback = new BackgroundImage("file:resource/img/background3test.png");
 		bg2.add(froggerback);
@@ -109,6 +128,15 @@ public class GameApp {
 	}
 	
 	
+	/**
+	 * Display time bar, animal and play corresponding music.
+	 * <p>For the time bar, if the player have not won the game before time consumed, 
+	 * <br>an alert will be displayed to remind him process up the process.
+	 *
+	 * @param bg 		Current background
+	 * @param stage 	Current stage
+	 * @param music 	Music played in corresponding level
+	 */
 	public void stageDisplay(GameStage bg,Stage stage,String music) {
 		Scene scene1 = new Scene(bg, 600, 800);
 		
@@ -165,7 +193,9 @@ public class GameApp {
 	
 
 	/**
-	 * Add the End and control digit.
+	 * Display the  element {@code End} and {@code score} in game stage.
+	 *
+	 * @param bg 	Current  background
 	 */
 	public void endAndDigit(GameStage bg) {
 		// The end block
@@ -190,7 +220,9 @@ public class GameApp {
 	}
 
 	/**
-	 * Control the health point.
+	 * Display the health point. For each players, they will have five times to try this game everytime.
+	 *
+	 * @param bg 		Current  background
 	 */
 	public void healthPoint(GameStage bg) {
 		for (int i = 0; i < KeepScore.numOfLifes; i++) {
@@ -200,6 +232,11 @@ public class GameApp {
 		}
 	}
 	
+	/**
+	 * Instantiates a new game app.
+	 *
+	 * @param bg the bg
+	 */
 	public GameApp(GameStage bg) {
 		this.background=bg;
 	}

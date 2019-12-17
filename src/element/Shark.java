@@ -37,11 +37,11 @@ public class Shark extends Actor {
 	/**
 	 * Instantiates a new shark with specific parameters.
 	 *
-	 * @param xpos the x position
-	 * @param ypos the y position
-	 * @param s    the speed
-	 * @param w    the image width
-	 * @param h    the image height
+	 * @param xpos - the x position
+	 * @param ypos - the y position
+	 * @param s    - the speed
+	 * @param w    - the image width
+	 * @param h    - the image height
 	 */
 	public Shark(int xpos, int ypos, double s, int w, int h) {
 		shark1 = new Image("file:resource/img/shark.png", w, h, true, true);
@@ -61,23 +61,9 @@ public class Shark extends Actor {
 	/**
 	 * Inherit this method from {@link Actor} to generate pre-defined {@code Shark}.
 	 * <p>
-	 * This method will be called in {@link Display} and the {@code Shark} will be
+	 * This method will be called in {@link display.GameApp} and the {@code Shark} will be
 	 * displayed in normal game level.
 	 */
-//	@Override
-//	public void disPlay() {
-//		for (int i = 0; i < 3; i++) {
-//			LevelController.background.add(new Shark(500, 355, -1.5, 80, 120));
-//			LevelController.background.add(new Shark(300, 355, -1.5, 80, 120));
-//			LevelController.background.add(new Shark(700, 356, -1.5, 80, 120));
-//
-//			LevelController.background.add(new AngryShark(800, 185, -1.5, 80, 95));
-//			LevelController.background.add(new AngryShark(600, 185, -1.5, 80, 130));
-//			LevelController.background.add(new AngryShark(400, 185, -1.5, 80, 130));
-//
-//		}
-//	}
-
 	@Override
 	public void disPlay(GameStage bg) {
 		for (int i = 0; i < 3; i++) {

@@ -24,8 +24,11 @@ import interact.controller.LevelController;
  * <li>change score when playing game
  * <li>Judge if user win or lose
  * <li>and write winner's name to {@code score.txt}.
+ * </ul>
  * <p>
- * Used in <{@link LevelController}
+ * Used in {@link LevelController}
+ * 
+ * @author 	scyyz4 
  */
 public class KeepScore extends World {
 
@@ -137,9 +140,9 @@ public class KeepScore extends World {
 	}
 
 	/**
-	 * Change scores when playing game.
+	 * Change scores when playing game and control its displayed position
 	 *
-	 * @param n the new number
+	 * @param n - the new number
 	 */
 	public void setNumber(int n) {
 		int shift = 0;
@@ -154,12 +157,9 @@ public class KeepScore extends World {
 	}
 
 	/**
-	 * Write user name to {@code score.txt}.
+	 * Function try to write score in a particular file which named {@code score.txt}.
 	 *
-	 * @param data the data
-	 */
-	/*
-	 * Function try to write score in a particular file which named "score.txt".
+	 * @param data - User name
 	 */
 	public void writeToFile(String data) {
 
@@ -188,9 +188,10 @@ public class KeepScore extends World {
 	 * Input {@code Animal}, {@code Stage}, {@code Music}. <br>
 	 * Used in {@link LevelController}.
 	 *
-	 * @param animal       the animal
-	 * @param primaryStage the primary stage
-	 * @param music        the music
+	 * @param animal       - Current frogger
+	 * @param primaryStage - the primary stage
+	 * @param music        - Corresponding music
+	 * @param background   - Current background
 	 */
 	public KeepScore(Animal animal, Stage primaryStage, String music, GameStage background) {
 		this.animal = animal;

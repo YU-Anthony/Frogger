@@ -22,7 +22,7 @@ public class GameWinController {
 
 	/**
 	 * Submit name when click on {@code submitButton}.
-	 *
+	 *And then, scene change to index page.
 	 * @throws Exception the exception
 	 */
 	@FXML

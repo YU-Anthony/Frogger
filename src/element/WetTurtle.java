@@ -51,11 +51,11 @@ public class WetTurtle extends Actor {
 	/**
 	 * Instantiates a new wet turtle with specific parameters.
 	 *
-	 * @param xpos the x position
-	 * @param ypos the y position
-	 * @param s    the speed
-	 * @param w    the image width
-	 * @param h    the image height
+	 * @param xpos - the x position
+	 * @param ypos - the y position
+	 * @param s    - the speed
+	 * @param w    - the image width
+	 * @param h    - the image height
 	 */
 	public WetTurtle(int xpos, int ypos, int s, int w, int h) {
 		turtle1 = new Image("file:resource/img/TurtleAnimation1.png", w, h, true, true);

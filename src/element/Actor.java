@@ -15,6 +15,8 @@ import interact.GameStage;
  * such as {@link AngryShark},{@link Boat}
  * {@link End},{@link Log},{@link Obstacle}
  * {@link Shark},{@link Turtle},{@link WetTurtle}.
+ * <p>
+ * @author scyyz4
  */
 public abstract class Actor extends ImageView{
 
@@ -22,8 +24,8 @@ public abstract class Actor extends ImageView{
     /**
      * Control actor's movement.
      *
-     * @param dx the movement on the x-coordinate
-     * @param dy the movement on the y-coordinate
+     * @param dx - the movement on the x-coordinate
+     * @param dy - the movement on the y-coordinate
      */
     public void move(double dx, double dy) {
         setX(getX() + dx);
@@ -115,7 +117,8 @@ public abstract class Actor extends ImageView{
     /**
      * Display different actors
      * with game level inputed.
-     * @param gameLevel the game level
+     * @param gameLevel  - Game level
+     * @param background - Current background
      */
     public void disPlay(String gameLevel,GameStage background) {  	
     }
@@ -125,5 +128,9 @@ public abstract class Actor extends ImageView{
      */
     public void disPlay() {}
     
+    /**
+     * Display actors with current background inputed.
+     * @param bg - Current background
+     */
     public void disPlay(GameStage bg) {}
 }

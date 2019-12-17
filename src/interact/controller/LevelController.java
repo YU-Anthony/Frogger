@@ -33,8 +33,6 @@ public class LevelController extends Application {
 
 	/**
 	 * Change to {@code easy level} when click on {@code easyButton} <br>
-	 * Change to {@code normal} when click on {@code normalButton}
-	 *
 	 * @throws Exception the exception
 	 */
 	@FXML
@@ -47,7 +45,13 @@ public class LevelController extends Application {
 		});
 
 	}
-
+	
+	
+	/**
+	 * Change to {@code normal} when click on {@code normalButton}
+	 *
+	 * @throws Exception the exception
+	 */
 	@FXML
 	protected void changeToNormal() throws Exception {
 		normalButton.setOnAction(event -> {
@@ -58,6 +62,10 @@ public class LevelController extends Application {
 
 	}
 
+	/**
+	 * Change to {@code Hidden level} when click on {@code enterButton} <br>
+	 * @throws Exception the exception
+	 */
 	@FXML
 	protected void changeToSecret() throws Exception {
 		GameStage background2=new GameStage();
@@ -71,6 +79,10 @@ public class LevelController extends Application {
 
 	}
 	
+	/**
+	 * An alert will be given when choosing the secret level <br>
+	 * @throws Exception the exception
+	 */
 	@FXML
 	protected void information() throws Exception{
 		secretButton.setOnAction(event->{

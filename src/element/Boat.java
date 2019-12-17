@@ -5,6 +5,8 @@ import javafx.scene.image.Image;
 
 /**
  * Define all attributes and actions of {@code Boat}.
+ * 
+ * @author scyyz4
  */
 public class Boat extends Actor {
 
@@ -59,7 +61,7 @@ public class Boat extends Actor {
 	/**
 	 * Inherit this method from {@link Actor} to generate pre-defined {@code Boat}.
 	 * <p>
-	 * This method will be called in {@link Display} and the {@code Boat} will be
+	 * This method will be called in {@link display.GameApp} and the {@code Boat} will be
 	 * displayed in normal game level.
 	 */
 	@Override

@@ -6,9 +6,7 @@ import interact.controller.LevelController;;
 
 /**
  * This Class inherit {@link Actor} and is displayed in {@link LevelController}.
- * 
- * <p>
- * This class define all attributes and actions of {@code Log}.
+ * It defines all attributes and actions of {@code Log}.
  */
 public class Log extends Actor {
 
@@ -29,13 +27,13 @@ public class Log extends Actor {
 	}
 
 	/**
-	 * Instantiates a new log.
+	 * Instantiates a new log with specific parameters.
 	 *
-	 * @param imageLink the image link
-	 * @param size      the image size
-	 * @param xpos      the horizontal axis
-	 * @param ypos      the vertical axis
-	 * @param s         the speed
+	 * @param imageLink - the image link
+	 * @param size      - the image size
+	 * @param xpos      - the horizontal axis
+	 * @param ypos      - the vertical axis
+	 * @param s         - the speed
 	 */
 	public Log(String imageLink, int size, int xpos, int ypos, double s) {
 		setImage(new Image(imageLink, size, size, true, true));
@@ -64,7 +62,7 @@ public class Log extends Actor {
 	/**
 	 * Inherit this method from {@link Actor} to generate pre-defined {@code Log}.
 	 * <p>
-	 * This method will be called in {@link Display} and the {@code Log} will be
+	 * This method will be called in {@link display.GameApp} and the {@code Log} will be
 	 * displayed in normal game level.
 	 */
 	@Override
@@ -78,16 +76,6 @@ public class Log extends Actor {
 
 			background.add(new Log("file:resource/img/logs.png", 250, 0, 276, -2));
 			background.add(new Log("file:resource/img/logs.png", 250, 400, 276, -2));
-		
-//		else if (gameLevel.equalsIgnoreCase("Normal")) {
-//			for (int i = 0; i < 3; i++) {
-//				LevelController.background.add(new Log("file:resource/img/log3.png", 130, 0 + 220 * i, 166, 0.75));
-//				LevelController.background.add(new Log("file:resource/img/log3.png", 130, 50 + 220 * i, 329, 0.75));
-//			}
-//
-//			LevelController.background.add(new Log("file:resource/img/logs.png", 250, 0, 276, -2));
-//			LevelController.background.add(new Log("file:resource/img/logs.png", 250, 400, 276, -2));
-//		}
 
 	}
 

@@ -3,7 +3,8 @@ package element;
 import javafx.scene.image.Image;
 
 /**
- * Import BackgroundImage in {@link LevelController}.
+ * This class define the attributes of background image.
+ * Import BackgroundImage in {@link interact.controller.LevelController}.
  */
 public class BackgroundImage extends Actor {
 
@@ -18,9 +19,9 @@ public class BackgroundImage extends Actor {
 	}
 
 	/**
-	 * Instantiates a new background image.
+	 * Instantiates a new background image with given Image link.
 	 *
-	 * @param imageLink the image link
+	 * @param imageLink - the image link
 	 */
 	public BackgroundImage(String imageLink) {
 		setImage(new Image(imageLink, 600, 800, true, true));

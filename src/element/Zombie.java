@@ -5,9 +5,15 @@ import java.util.ArrayList;
 import interact.GameStage;
 import javafx.scene.image.Image;
 
+/**
+ * This class defines all actions and attributes about Zombie.
+ */
 public class Zombie extends Actor {
+	
+	/** The speed. */
 	private double speed;
 
+	/** The image. */
 	ArrayList<Image> image = new ArrayList<Image>();
 
 	/**
@@ -42,6 +48,15 @@ public class Zombie extends Actor {
 			setX(600);
 	}
 
+	/**
+	 * Instantiates a new zombie with specific parameters.
+	 *
+	 * @param xpos - the x position
+	 * @param ypos - the y position
+	 * @param s - zombie speed
+	 * @param w - zombie width
+	 * @param h - zombie height
+	 */
 	public Zombie(int xpos, int ypos, double s, int w, int h) {
 		for (int i = 1; i <= 7; i++) {
 			Image zombie = new Image("file:resource/img/zombie/z_1_0" + String.valueOf(i) + ".png", w, h, true, true);
@@ -55,9 +70,20 @@ public class Zombie extends Actor {
 
 	}
 
+	/**
+	 * Instantiates a new zombie without specific parameters.
+	 */
 	public Zombie() {
 	}
-
+	
+	
+	/**
+	 * Inherit this method from {@link Actor} to generate pre-defined {@code Log}.
+	 * <p>
+	 * This method will be called in {@link display.GameApp} and the {@code Log} will be
+	 * displayed in normal game level.
+	 * @param background - Current background
+	 */
 	@Override
 	public void disPlay(GameStage background) {
 		// The first line of car

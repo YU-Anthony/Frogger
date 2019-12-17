@@ -3,8 +3,7 @@ package element;
 import javafx.scene.image.Image;
 
 /**
- * This Class inherit from {@link Actor} to define all attributes and action of
- * End.
+ * This Class inherit from {@link Actor} to define all attributes and action of {@code End Point}.
  */
 public class End extends Actor {
 

@@ -104,7 +104,7 @@ public abstract class World extends Pane {
 	/**
 	 * Add different actors to background.
 	 *
-	 * @param actor the actor
+	 * @param actor - Actor type
 	 */
 	public void add(Actor actor) {
 		getChildren().add(actor);

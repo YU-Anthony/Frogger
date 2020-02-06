@@ -1,0 +1,32 @@
+
+@font-face {
+    /*//-fx-font-family:pleated;*/
+    src:url("joystix.ttf");
+}
+
+/*#playButton{
+    -fx-font-family:pleated;
+}*/
+
+.button {
+    -fx-background-color:transparent;
+    -fx-font-family: "joystix";
+    -fx-font-size:25px;
+    -fx-text-fill:"WHITE"; 
+    -fx-text-stroke: red;
+    
+}
+
+
+
+.button:hover{
+	-fx-text-fill:"GREEN";
+	-fx-font-size:40px;
+	-fx-cursor:hand;
+}
+
+.button:pressed{
+	-fx-text-fill:"RED";
+	
+}
+
